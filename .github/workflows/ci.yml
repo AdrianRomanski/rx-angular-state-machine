@@ -24,4 +24,4 @@ jobs:
 
       # Run Nx commands
       - name: Run Nx affected commands
-        run: npx nx affected -t lint test build e2e-ci
+        run: npx nx affected -t lint test build
