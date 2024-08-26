@@ -47,7 +47,7 @@ export class TemplateModalFooterComponent implements OnInit, TemplateModalFooter
   @ContentChild(CloseButtonDirective, { static: true })
   closeButtonDirective!: CloseButtonDirective;
 
-  // @ts-ignore
+  // @ts-expect-error
   @ContentChildren(ActionButtonDirective, { static: true })
   actionButtonDirectives!: QueryList<ActionButtonDirective>;
 
