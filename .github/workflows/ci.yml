@@ -18,4 +18,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: npx nx affected -t lint test build e2e-ci
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run Nx commands
+      - name: Run Nx affected commands
+        run: npx nx affected -t lint test build e2e-ci
