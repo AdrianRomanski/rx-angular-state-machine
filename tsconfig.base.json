@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@shared/ui": ["libs/shared/ui/src/lib/ui/index.ts"],
+      "@shared/util/directives": ["libs/shared/util/src/lib/directives/src/index.ts"],
+      "@shared/util/model": ["libs/shared/util/src/lib/model/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
