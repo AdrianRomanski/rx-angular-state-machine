@@ -14,7 +14,9 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudAccessToken": "ZGRhYjkwODctNDljOS00NmI5LTg3NmYtYzEwMGIwODY5NjVjfHJlYWQtd3JpdGU=",
+  "affected": {
+    "defaultBase": "origin/main"
+  },
   "targetDefaults": {
     "@angular-devkit/build-angular:application": {
       "cache": true,
