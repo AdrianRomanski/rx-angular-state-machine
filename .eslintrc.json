@@ -12,12 +12,10 @@
             "enforceBuildableLibDependency": true,
             "allow": [],
             "depConstraints": [
-                {
+              {
                 "sourceTag": "type:app",
                 "onlyDependOnLibsWithTags": [
-                  "type:shell",
                   "type:feature",
-                  "type:api",
                   "type:ui",
                   "type:data-access",
                   "type:util"
@@ -27,7 +25,6 @@
                 "sourceTag": "type:feature",
                 "onlyDependOnLibsWithTags": [
                   "type:feature",
-                  "type:api",
                   "type:ui",
                   "type:data-access",
                   "type:util"
