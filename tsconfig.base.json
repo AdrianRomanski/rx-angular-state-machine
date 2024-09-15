@@ -15,10 +15,31 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@characters/routes": [
+        "libs/characters/src/routes.ts"
+      ],
+      "@characters/domain": [
+        "libs/characters/src/lib/domain/src/index.ts"
+      ],
+      "@characters/ui": [
+        "libs/characters/ui/src/index.ts"
+      ],
+      "@characters/util/model": [
+        "libs/characters/src/lib/util/src/lib/model/index.ts"
+      ],
+      "@characters/list": [
+        "libs/characters/src/lib/feature-list/src/index.ts"
+      ],
       "@shared/ui": ["libs/shared/ui/src/lib/ui/index.ts"],
-      "@shared/ui/navigation": ["libs/shared/ui/src/lib/side-navigation/index.ts"],
-      "@shared/ui/template-modal": ["libs/shared/ui/src/lib/template-modal/index.ts"],
-      "@shared/util/directives": ["libs/shared/util/src/lib/directives/src/index.ts"],
+      "@shared/ui/navigation": [
+        "libs/shared/ui/src/lib/side-navigation/index.ts"
+      ],
+      "@shared/ui/template-modal": [
+        "libs/shared/ui/src/lib/template-modal/index.ts"
+      ],
+      "@shared/util/directives": [
+        "libs/shared/util/src/lib/directives/src/index.ts"
+      ],
       "@shared/util/model": ["libs/shared/util/src/lib/model/src/index.ts"]
     }
   },

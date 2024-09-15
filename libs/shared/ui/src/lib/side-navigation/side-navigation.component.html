@@ -9,10 +9,16 @@
   <mat-sidenav [mode]="isMobile ? 'over' : 'side'"
                [opened]="isMobile ? 'false' : 'true'">
     <mat-nav-list>
-      <a mat-list-item>
+      <a mat-list-item [routerLink]="['/home']">
          <span class="entry">
             <mat-icon>house</mat-icon>
-            <span *ngIf="!isCollapsed">Dashboard</span>
+            <span *ngIf="!isCollapsed">Home</span>
+         </span>
+      </a>
+      <a mat-list-item [routerLink]="['/characters']">
+         <span class="entry">
+            <mat-icon>person</mat-icon>
+            <span *ngIf="!isCollapsed">Characters</span>
          </span>
       </a>
     </mat-nav-list>

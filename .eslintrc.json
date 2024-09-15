@@ -15,6 +15,16 @@
               {
                 "sourceTag": "type:app",
                 "onlyDependOnLibsWithTags": [
+                  "type:shell",
+                  "type:feature",
+                  "type:ui",
+                  "type:data-access",
+                  "type:util"
+                ]
+              },
+              {
+                "sourceTag": "type:shell",
+                "onlyDependOnLibsWithTags": [
                   "type:feature",
                   "type:ui",
                   "type:data-access",
@@ -45,6 +55,18 @@
               {
                 "sourceTag": "type:util",
                 "onlyDependOnLibsWithTags": ["type:util"]
+              },
+              {
+                "sourceTag": "domain:app",
+                "onlyDependOnLibsWithTags": ["*"]
+              },
+              {
+                "sourceTag": "domain:characters",
+                "onlyDependOnLibsWithTags": ["domain:characters", "domain:shared"]
+              },
+              {
+                "sourceTag": "domain:shared",
+                "onlyDependOnLibsWithTags": ["domain:shared"]
               }
             ]
           }

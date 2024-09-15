@@ -6,7 +6,7 @@ import { MatIconButton } from '@angular/material/button';
 import { MatListItem, MatListModule, MatNavList } from '@angular/material/list';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { CommonModule, NgClass } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
@@ -26,7 +26,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     CommonModule,
     MatIconModule,
     MatListModule,
-    RouterOutlet
+    RouterOutlet,
+    RouterLink
   ],
   standalone: true
 })

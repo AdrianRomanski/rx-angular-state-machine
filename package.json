@@ -2,7 +2,10 @@
   "name": "@rx-angular-state-machine/source",
   "version": "0.0.1",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "nx": "npx",
+    "start": "nx run rx-angular-state-machine:serve"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~18.2.0",
