@@ -2,8 +2,8 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  ContentChild,
-  OnInit,
+  ContentChild, inject,
+  OnInit
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
@@ -33,7 +33,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TemplateModalComponent implements OnInit {
-  private readonly dialogRef: MatDialogRef<TemplateModalComponent>;
+  private readonly dialogRef  = inject( MatDialogRef<TemplateModalComponent>)
 
   @ContentChild(TEMPLATE_MODAL_HEADER, { static: true })
   header!: TemplateModalHeaderBridge;
