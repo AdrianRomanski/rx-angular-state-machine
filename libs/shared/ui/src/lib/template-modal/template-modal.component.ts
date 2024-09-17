@@ -33,6 +33,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TemplateModalComponent implements OnInit {
+  private readonly dialogRef: MatDialogRef<TemplateModalComponent>;
+
   @ContentChild(TEMPLATE_MODAL_HEADER, { static: true })
   header!: TemplateModalHeaderBridge;
 
@@ -41,8 +43,6 @@ export class TemplateModalComponent implements OnInit {
 
   @ContentChild(TEMPLATE_MODAL_FORM, { static: true })
   form!: TemplateModalFormBridge;
-
-  constructor(public dialogRef: MatDialogRef<TemplateModalComponent>) {}
 
   ngOnInit(): void {
     this.submitListener();
