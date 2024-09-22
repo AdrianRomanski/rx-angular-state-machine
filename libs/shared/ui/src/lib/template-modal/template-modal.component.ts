@@ -2,7 +2,7 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  ContentChild, inject,
+  ContentChild, DestroyRef, inject,
   OnInit
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,7 +21,7 @@ import { TEMPLATE_MODAL_FORM } from './form/template-modal-form.token';
 import { TEMPLATE_MODAL_HEADER } from './header/template-modal-header.token';
 
 /**SHARED*/
-import { StateMachine } from '@shared/util/model';
+import { ActionStateMachine } from '@shared/util/model';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
@@ -33,7 +33,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TemplateModalComponent implements OnInit {
-  private readonly dialogRef  = inject( MatDialogRef<TemplateModalComponent>)
+  private readonly dialogRef  = inject(MatDialogRef<TemplateModalComponent>)
+  private readonly destroyRef = inject(DestroyRef)
 
   @ContentChild(TEMPLATE_MODAL_HEADER, { static: true })
   header!: TemplateModalHeaderBridge;
@@ -60,20 +61,20 @@ export class TemplateModalComponent implements OnInit {
       race([headerCloseButtonClick$, footerCloseButtonClick$]),
       footerCloseButtonClick$,
     )
-      .pipe(takeUntilDestroyed())
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(() => this.dialogRef.close());
   }
 
   private submitListener(): void {
     this.footer?.submitButtonClick
-      .pipe(takeUntilDestroyed())
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(() => this.dialogRef.close(this.form.get()));
   }
 
   private actionListener(): void {
     this.footer?.actionButtonClick
-      .pipe(takeUntilDestroyed())
-      .subscribe((stateMachine: StateMachine<NonNullable<string>>) =>
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((stateMachine: ActionStateMachine<NonNullable<string>>) =>
         this.dialogRef.close(stateMachine.action),
       );
   }

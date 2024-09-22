@@ -3,8 +3,8 @@ import {
   ChangeDetectionStrategy,
   Component,
   ContentChild,
-  ContentChildren,
-  EventEmitter,
+  ContentChildren, DestroyRef,
+  EventEmitter, inject,
   OnInit,
   Output,
   QueryList
@@ -24,7 +24,7 @@ import {
   CloseButtonDirective,
   SubmitButtonDirective,
 } from '@shared/util/directives';
-import { StateMachine } from '@shared/util/model';
+import { ActionStateMachine } from '@shared/util/model';
 
 @Component({
   selector: 'shared-ui-template-modal-footer',
@@ -41,6 +41,8 @@ import { StateMachine } from '@shared/util/model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TemplateModalFooterComponent implements OnInit, TemplateModalFooterBridge {
+  private readonly destroyRef = inject(DestroyRef);
+
   @ContentChild(SubmitButtonDirective, { static: true })
   submitButtonDirective!: SubmitButtonDirective;
 
@@ -58,7 +60,7 @@ export class TemplateModalFooterComponent implements OnInit, TemplateModalFooter
   submitButtonClick = new EventEmitter<void>();
 
   @Output()
-  actionButtonClick = new EventEmitter<StateMachine<any>>();
+  actionButtonClick = new EventEmitter<ActionStateMachine<any>>();
 
   ngOnInit(): void {
     this.closeButtonListener();
@@ -68,13 +70,13 @@ export class TemplateModalFooterComponent implements OnInit, TemplateModalFooter
 
   private submitButtonListener(): void {
     this.submitButtonDirective?.submitButtonClick
-      .pipe(takeUntilDestroyed())
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(() => this.submitButtonClick.emit());
   }
 
   private closeButtonListener(): void {
     this.closeButtonDirective?.closeButtonClick
-       .pipe(takeUntilDestroyed())
+       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(() => this.closeButtonClick.emit());
   }
 
@@ -85,7 +87,7 @@ export class TemplateModalFooterComponent implements OnInit, TemplateModalFooter
       },
     );
     merge(actions$)
-      .pipe(mergeAll(),takeUntilDestroyed())
+      .pipe(mergeAll(),takeUntilDestroyed(this.destroyRef))
       .subscribe((action: string): void => {
         this.actionButtonClick.emit({ action });
       });

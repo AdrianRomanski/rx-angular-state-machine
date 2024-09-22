@@ -1,0 +1,19 @@
+<div class="wow-card" [ngClass]="{'alliance': ui.faction === 'hehe', 'horde': ui.faction === 'Horde'}">
+  <div class="wow-card-header">
+    <h2>{{ ui.name }}</h2>
+  </div>
+
+  <div class="wow-card-body">
+    <div class="race-class-info">
+      <span><strong>Race:</strong> {{ ui.race }}</span>
+      <span><strong>Class:</strong> {{ ui.class }} <i [ngClass]="getClassIcon(ui.class)"></i></span>
+    </div>
+
+    <div class="level-progress">
+      <span><strong>Level:</strong> {{ ui.level }}</span>
+      <div class="progress-bar">
+        <div class="progress" [style.width]="getLevelProgress(ui.level)"></div>
+      </div>
+    </div>
+  </div>
+</div>?.

@@ -2,10 +2,10 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  ContentChild,
-  EventEmitter,
+  ContentChild, DestroyRef,
+  EventEmitter, inject,
   OnInit,
-  Output,
+  Output
 } from '@angular/core';
 
 /**INTERNALS*/
@@ -33,6 +33,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 export class TemplateModalHeaderComponent
   implements OnInit, TemplateModalHeaderBridge
 {
+  private readonly destroyRef = inject(DestroyRef);
+
   @ContentChild(CloseButtonDirective, { static: true })
   closeButtonDirective!: CloseButtonDirective;
 
@@ -45,7 +47,7 @@ export class TemplateModalHeaderComponent
 
   private closeButtonListener(): void {
     this.closeButtonDirective?.closeButtonClick
-      .pipe(takeUntilDestroyed())
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(() => this.closeButtonClick.emit());
   }
 }

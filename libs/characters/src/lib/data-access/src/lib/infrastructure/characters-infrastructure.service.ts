@@ -14,8 +14,8 @@ const mockCharacters: CharacterDomain[] = [
   {
     id: "1",
     name: "Thalion",
-    race: "Elf",
-    class: "Ranger",
+    race: "NightElf",
+    class: "Hunter",
     level: 45,
     profession: "Bowmaster",
     faction: "Alliance",
@@ -40,7 +40,7 @@ const mockCharacters: CharacterDomain[] = [
     class: "Mage",
     level: 38,
     profession: "Alchemist",
-    faction: "Neutral",
+    faction: "Alliance",
     skills: ["Fireball", "Teleportation", "Arcane Knowledge", "Potion Brewing"],
     guildId: "guild-789"
   },
@@ -58,7 +58,7 @@ const mockCharacters: CharacterDomain[] = [
 ];
 
 @Injectable({ providedIn: 'root' })
-export class CharactersService {
+export class CharactersInfrastructureService {
   private readonly http: HttpClient = inject(HttpClient)
 
   findAll(): Observable<CharacterDomain[]> {

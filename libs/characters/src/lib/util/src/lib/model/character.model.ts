@@ -1,28 +1,33 @@
 export interface Character {
   id: string;
   name: string;
+  level: number;
+  faction: Faction;
   race: HordeRace | AllianceRace;
   class: Class;
-  level: number;
   profession: Profession;
- }
+}
+
+export enum Faction {
+  Horde='Horde', Alliance='Alliance'
+}
 
 export enum HordeRace {
-  ORC = 'ORC', TAUREN = 'TAUREN', UNDEAD='UNDEAD'
+  Orc = 'Orc', Tauren = 'Tauren', Undead='Undead', Troll='Troll'
 }
 
 export enum AllianceRace {
-  Gnome = 'GNOME', Human = 'HUMAN', Night_Elf= 'NIGHT ELF'
+  Gnome = 'Gnome', Human = 'Human', NightElf= 'Night Elf'
 }
 
 export enum Class {
-  Warrior = 'WARRIOR', Mage = 'MAGE', Hunter='HUNTER',
-  Priest = 'PRIEST', Rogue = 'ROGUE', Paladin='PALADIN',
-  Shaman = 'SHAMAN', Warlock = 'WARLOCK', Druid='DRUID',
+  Warrior = 'Warrior', Mage = 'Mage', Hunter='Hunter',
+  Priest = 'Priest', Rogue = 'Rogue', Paladin='Paladin',
+  Shaman = 'Shaman', Warlock = 'Warlock', Druid='Druid',
 }
 
 export enum Profession {
-  Blacksmith = 'BLACKSMITH', Herbalism = 'HERBALISM',
-  Enchanting= 'ENCHANTING', Alchemy='ALCHEMY'
+  Blacksmith = 'Blacksmith', Herbalism = 'Herbalism',
+  Enchanting= 'Enchanting', Alchemy='Alchemy'
 }
 

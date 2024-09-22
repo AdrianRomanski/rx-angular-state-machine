@@ -18,11 +18,11 @@
       "@characters/routes": [
         "libs/characters/src/routes.ts"
       ],
-      "@characters/domain": [
-        "libs/characters/src/lib/domain/src/index.ts"
+      "@characters/data-access": [
+        "libs/characters/src/lib/data-access/src/index.ts"
       ],
       "@characters/ui": [
-        "libs/characters/ui/src/index.ts"
+        "libs/characters/src/lib/ui/src/index.ts"
       ],
       "@characters/util/model": [
         "libs/characters/src/lib/util/src/lib/model/index.ts"

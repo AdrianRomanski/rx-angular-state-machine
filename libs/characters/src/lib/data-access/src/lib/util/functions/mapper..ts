@@ -1,11 +1,11 @@
 /**INTERNALS*/
-import { CharacterDomain } from '../entity/character.entity';
+import { CharacterDomain } from '../../entity/character.entity';
 
 /**CHARACTERS*/
 import {
   AllianceRace,
   Character,
-  Class,
+  Class, Faction,
   HordeRace,
   Profession
 } from '@characters/util/model';
@@ -19,7 +19,8 @@ export function mapDomainToCharacter(domain: CharacterDomain): Character {
     level: domain.level,
     race: mapToRace(domain.faction, domain.race),
     class: Class[domain.class as keyof typeof Class],
-    profession: Profession[domain.profession as keyof typeof Profession]
+    profession: Profession[domain.profession as keyof typeof Profession],
+    faction: Faction[domain.faction as keyof typeof Faction]
   }
 }
 

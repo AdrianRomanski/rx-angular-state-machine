@@ -1,7 +1,31 @@
-<div *ngFor="let character of characters$ | async">
-  <span>{{character.name}}</span>
-  <span>{{character.profession}}</span>
-  <span>{{character.class}}</span>
-  <span>{{character.race}}</span>
-  <span>{{character.level}}</span>
-</div>
+<ng-container *rxLet="ui$ let ui">
+  <div [sharedBorder]="ui.border" class="characters-section">
+    <div class="header">
+      <h1 [ngStyle]="{color: ui.accent}"><i class="fas fa-users"></i> World of Warcraft Characters</h1>
+      <div class="section-divider"></div>
+      <p>Explore the detailed profiles of your favorite heroes and adventurers.</p>
+    </div>
+
+    <div class="characters-container">
+      <characters-ui-card
+        *ngFor="let character of characters$ | async"
+        [ui]="{
+        name: character.name,
+        class: character.class,
+        level: character.level,
+        race: character.race,
+        faction: 'Alliance'
+      }"
+      >
+      </characters-ui-card>
+    </div>
+
+    <div class="footer">
+      <p><i class="fas fa-gamepad"></i> Proudly showing {{ (characters$ | async)?.length || 0 }} characters from Azeroth</p>
+      <div class="footer-divider"></div>
+      <p>For the Alliance! For the Horde!</p>
+    </div>
+  </div>
+
+</ng-container>
+

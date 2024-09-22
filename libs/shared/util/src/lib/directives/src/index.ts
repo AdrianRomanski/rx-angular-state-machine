@@ -1,3 +1,5 @@
-export * from './lib/close-button.directive';
-export * from './lib/submit-button.directive';
-export * from './lib/action-button.directive';
+export * from './lib/util/close-button.directive';
+export * from './lib/util/submit-button.directive';
+export * from './lib/util/action-button.directive';
+
+export * from './lib/attribute/border.directive';
