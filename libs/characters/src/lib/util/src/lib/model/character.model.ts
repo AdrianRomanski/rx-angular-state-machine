@@ -13,21 +13,31 @@ export enum Faction {
 }
 
 export enum HordeRace {
-  Orc = 'Orc', Tauren = 'Tauren', Undead='Undead', Troll='Troll'
+  Orc = 'Orc', Tauren = 'Tauren', Undead='Undead', Troll='Troll',
+  Blood_Elf = 'Blood Elf', Goblin = 'Goblin',
+  Nightborne='Nightborne', Highmountain_Tauren='Highmountain_Tauren',
+  Zandalari_Troll='Zandalari Troll', Vulpera='Vulpera'
 }
 
 export enum AllianceRace {
-  Gnome = 'Gnome', Human = 'Human', NightElf= 'Night Elf'
+  Gnome = 'Gnome', Human = 'Human', NightElf= 'Night Elf',
+  Draenei = 'Draenei', Worgen = 'Worgen', Void_Elf= 'Void Elf',
+  Lightforged_Draenei = 'Lightforged Draenei',
+  Kul_Tiran = 'Kul Tiran', Mechagnome='Mechagnome'
 }
 
 export enum Class {
-  Warrior = 'Warrior', Mage = 'Mage', Hunter='Hunter',
-  Priest = 'Priest', Rogue = 'Rogue', Paladin='Paladin',
-  Shaman = 'Shaman', Warlock = 'Warlock', Druid='Druid',
+  Death_Knight = 'Death_Knight', Demon_Hunter = 'Demon_Hunter', Druid='Druid',
+  Hunter = 'Hunter', Mage = 'Mage', Monk='Monk',
+  Paladin = 'Paladin', Priest = 'Priest', Rogue='Rogue',
+  Shaman = 'Shaman', Warlock = 'Warlock', Warrior='Warrior',
 }
 
 export enum Profession {
-  Blacksmith = 'Blacksmith', Herbalism = 'Herbalism',
-  Enchanting= 'Enchanting', Alchemy='Alchemy'
+  Alchemy = 'Alchemy', Blacksmithing = 'Blacksmithing',
+  Enchanting= 'Enchanting', Engineering='Engineering',
+  Herbalism= 'Herbalism', Inscription='Inscription',
+  Jewelcrafting= 'Jewelcrafting', Leatherworking='Leatherworking',
+  Mining= 'Mining', Skinning='Skinning', Tailoring='Tailoring',
 }
 

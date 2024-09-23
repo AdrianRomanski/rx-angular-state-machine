@@ -10,8 +10,6 @@ import {
   Profession
 } from '@characters/util/model';
 
-const HORDE = 'HORDE';
-
 export function mapDomainToCharacter(domain: CharacterDomain): Character {
   return {
     id: domain.id,
@@ -25,7 +23,7 @@ export function mapDomainToCharacter(domain: CharacterDomain): Character {
 }
 
 function mapToRace(faction: string, race: string): HordeRace | AllianceRace {
-  return faction === HORDE
+  return faction === 'Horde'
     ? HordeRace[race as keyof typeof HordeRace]
     : AllianceRace[race as keyof typeof AllianceRace];
 }
