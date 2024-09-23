@@ -13,8 +13,12 @@ import {
 } from '../const/border';
 
 /**SHARED*/
-import { BorderUI } from '@shared/util/model';
+import { BorderUI, BoxUI } from '@shared/util/model';
 import { ALLIANCE_ACCENT, EQUALITY_ACCENT, HORDE_ACCENT } from '../const/accent';
+import { AllianceRace, Class, Faction, HordeRace } from '@characters/util/model';
+import { RACE_COLORS } from '../const/race';
+import { CLASS_COLORS } from '../const/class';
+import { FACTION_BOX } from '../const/faction';
 
 export function listBorder(level: number): BorderUI {
   switch (true) {
@@ -62,4 +66,16 @@ export function listAccent(hordeCount: number, allianceCount: number): string {
   } else {
     return EQUALITY_ACCENT;
   }
+}
+
+export function raceColor(race: HordeRace | AllianceRace): string {
+  return RACE_COLORS[race] || '#FFFFFF';
+}
+
+export function classColor(c: Class): string {
+  return CLASS_COLORS[c] || '#FFFFFF';
+}
+
+export function factionBox(faction: Faction): BoxUI {
+  return FACTION_BOX[faction];
 }

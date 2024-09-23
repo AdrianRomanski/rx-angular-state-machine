@@ -47,7 +47,7 @@ const mockCharacters: CharacterDomain[] = [
   {
     id: "4",
     name: "Tyrande",
-    race: "Night Elf",
+    race: "Human",
     class: "Druid",
     level: 62,
     profession: "Herbalism",
@@ -80,7 +80,7 @@ const mockCharacters: CharacterDomain[] = [
   {
     id: "7",
     name: "Kael'thas",
-    race: "Blood Elf",
+    race: "Blood_Elf",
     class: "Mage",
     level: 57,
     profession: "Jewelcrafting",
@@ -113,7 +113,7 @@ const mockCharacters: CharacterDomain[] = [
   {
     id: "10",
     name: "Velen",
-    race: "Lightforged Draenei",
+    race: "Human",
     class: "Paladin",
     level: 65,
     profession: "Alchemy",
@@ -124,7 +124,7 @@ const mockCharacters: CharacterDomain[] = [
   {
     id: "11",
     name: "Zul'jin",
-    race: "Zandalari Troll",
+    race: "Orc",
     class: "Warlock",
     level: 52,
     profession: "Herbalism",

@@ -1,1 +1,1 @@
-export * from './lib/model/character.model';
+export * from './lib/model/index';

@@ -9,11 +9,12 @@ import { RxLet } from '@rx-angular/template/let';
 
 /**CHARACTERS*/
 import { CharactersFacade } from '@characters/data-access';
-import { Character, ListUI } from '@characters/util/model';
+import { Character, ListUI, Profession } from '@characters/util/model';
 import { UiCardComponent } from '@characters/ui';
 
 /**SHARED*/
 import { SharedBorderDirective } from '@shared/util/directives';
+import { CardStateMachine } from '../../../../data-access/src/lib/state/characters.model';
 
 @Component({
   selector: 'characters-feature-list',
@@ -31,7 +32,7 @@ import { SharedBorderDirective } from '@shared/util/directives';
 export class ContainerCharactersListComponent implements OnInit {
   private readonly facade = inject(CharactersFacade);
 
-  protected characters$: Observable<Character[]> = this.facade.characters$;
+  protected cards$: Observable<CardStateMachine[]> = this.facade.cards$;
   protected ui$: Observable<ListUI> = this.facade.listUI$;
 
   ngOnInit(): void {

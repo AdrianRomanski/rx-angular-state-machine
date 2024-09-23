@@ -2,20 +2,20 @@
 import { inject, Injectable } from '@angular/core';
 
 /**DEPENDENCIES*/
-import {  Observable, switchMap, tap } from 'rxjs';
+import { map, Observable, switchMap, tap } from 'rxjs';
 import { rxState } from '@rx-angular/state';
 import { rxActions } from '@rx-angular/state/actions';
 
 /**INTERNALS*/
 import { CharacterDomain } from '../entity/character.entity';
 import { CharactersInfrastructureService } from '../infrastructure/characters-infrastructure.service';
-import { CharactersState } from './characters.model';
+import { CardStateMachine, CharactersState, CharactersStateMachine } from './characters.model';
 import { BORDER_STYLE_1_10 } from '../util/const/border';
 import { HORDE_ACCENT } from '../util/const/accent';
 import { setFindAllState } from './characters.setter';
 
 /**CHARACTERS*/
-import { Character, ListUI } from '@characters/util/model';
+import { ListUI } from '@characters/util/model';
 
 @Injectable({ providedIn: 'root' })
 export class CharactersFacade {
@@ -35,7 +35,7 @@ export class CharactersFacade {
     'characters',
     'ui'
   );
-  public readonly characters$: Observable<Character[]> = this.state.select(
+  public readonly cards$: Observable<CardStateMachine[]> = this.state.select(
     'characters',
     'data'
   );

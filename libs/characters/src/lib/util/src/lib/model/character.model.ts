@@ -14,15 +14,15 @@ export enum Faction {
 
 export enum HordeRace {
   Orc = 'Orc', Tauren = 'Tauren', Undead='Undead', Troll='Troll',
-  Blood_Elf = 'Blood Elf', Goblin = 'Goblin',
+  Blood_Elf = 'Blood_Elf', Goblin = 'Goblin',
   Nightborne='Nightborne', Highmountain_Tauren='Highmountain_Tauren',
-  Zandalari_Troll='Zandalari Troll', Vulpera='Vulpera'
+  Zandalari_Troll='Zandalari_Troll', Vulpera='Vulpera'
 }
 
 export enum AllianceRace {
-  Gnome = 'Gnome', Human = 'Human', NightElf= 'Night Elf',
-  Draenei = 'Draenei', Worgen = 'Worgen', Void_Elf= 'Void Elf',
-  Lightforged_Draenei = 'Lightforged Draenei',
+  Gnome = 'Gnome', Human = 'Human', NightElf= 'Night_Elf',
+  Draenei = 'Draenei', Worgen = 'Worgen', Void_Elf= 'Void_Elf',
+  Lightforged_Draenei = 'Lightforged_Draenei',
   Kul_Tiran = 'Kul Tiran', Mechagnome='Mechagnome'
 }
 

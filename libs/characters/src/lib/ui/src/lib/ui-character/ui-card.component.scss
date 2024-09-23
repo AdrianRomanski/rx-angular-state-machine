@@ -46,7 +46,7 @@
       }
 
       strong {
-        color: #8b949e;
+        color:  #c9d1d9;
       }
 
       i {
@@ -61,20 +61,20 @@
         font-size: 18px;
       }
 
-      .progress-bar {
-        width: 100%;
-        height: 10px;
-        background-color: #3a3f44;
-        border-radius: 5px;
-        margin-top: 5px;
-        overflow: hidden;
-      }
+      //.progress-bar {
+      //  width: 100%;
+      //  height: 10px;
+      //  background-color: #3a3f44;
+      //  border-radius: 5px;
+      //  margin-top: 5px;
+      //  overflow: hidden;
+      //}
 
-      .progress {
-        height: 100%;
-        background-color: #58a6ff; /* Default color (Alliance) */
-        border-radius: 5px;
-      }
+      //.progress {
+      //  height: 100%;
+      //  background-color: #58a6ff; /* Default color (Alliance) */
+      //  border-radius: 5px;
+      //}
     }
   }
 
@@ -90,9 +90,9 @@
       background-color: #0077ff;
     }
 
-    .progress-bar .progress {
-      background-color: #58a6ff;
-    }
+    //.progress-bar .progress {
+    //  background-color: #58a6ff;
+    //}
   }
 
   &.horde {
@@ -107,13 +107,84 @@
       background-color: #ff4500;
     }
 
-    .progress-bar .progress {
-      background-color: #ff6666;
-    }
+    //.progress-bar .progress {
+    //  background-color: #ff6666;
+    //}
   }
 
   &:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
     transform: scale(1.02);
   }
+}
+
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  transition: width 0.3s ease;
+}
+
+.progress-label {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  font-weight: bold;
+}
+
+.level-1-10 {
+  height: 10px;
+  background-color: #ffcccc; /* Light red */
+}
+
+.level-10-20 {
+  height: 12px;
+  background-color: #ff9999; /* Red */
+}
+
+.level-20-30 {
+  height: 14px;
+  background-color: #ffcc99; /* Light orange */
+}
+
+.level-30-40 {
+  height: 16px;
+  background-color: #ffb366; /* Orange */
+}
+
+.level-40-50 {
+  height: 18px;
+  background-color: #ffcc66; /* Yellow-orange */
+}
+
+.level-50-60 {
+  height: 20px;
+  background-color: #ffff99; /* Light yellow */
+}
+
+.level-60-70 {
+  height: 22px;
+  background-color: #ccffcc; /* Light green */
+}
+
+.level-70-80 {
+  height: 24px;
+  background-color: #99ff99; /* Green */
+}
+
+.level-80-90 {
+  height: 26px;
+  background-color: #66ff66; /* Darker green */
+}
+
+.level-90-100 {
+  height: 28px;
+  background-color: #99ccff; /* Light blue */
 }
