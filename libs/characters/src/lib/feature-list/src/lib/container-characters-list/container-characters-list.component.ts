@@ -9,12 +9,14 @@ import { RxLet } from '@rx-angular/template/let';
 
 /**CHARACTERS*/
 import { CharactersFacade } from '@characters/data-access';
-import { Character, ListUI, Profession } from '@characters/util/model';
+import { Character, Class, Faction, HordeRace, ListUI, Profession } from '@characters/util/model';
 import { UiCardComponent } from '@characters/ui';
 
 /**SHARED*/
 import { SharedBorderDirective } from '@shared/util/directives';
 import { CardStateMachine } from '../../../../data-access/src/lib/state/characters.model';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalCharacterComponent } from '../../../../ui/src/lib/modal-character/modal-character.component';
 
 @Component({
   selector: 'characters-feature-list',
@@ -30,12 +32,31 @@ import { CardStateMachine } from '../../../../data-access/src/lib/state/characte
   styleUrl: './container-characters-list.component.scss',
 })
 export class ContainerCharactersListComponent implements OnInit {
+    character: Character = {
+    id: '1',
+    name: 'Thrall',
+    level: 100,
+    faction: Faction.Horde,
+    race: HordeRace.Orc,
+    class: Class.Shaman,
+    profession: Profession.Blacksmithing,
+  };
+
   private readonly facade = inject(CharactersFacade);
 
   protected cards$: Observable<CardStateMachine[]> = this.facade.cards$;
   protected ui$: Observable<ListUI> = this.facade.listUI$;
 
+   constructor(public dialog: MatDialog) {}
+
   ngOnInit(): void {
     this.facade.actions.findAll();
+  }
+
+  openCharacterModal(): void {
+    this.dialog.open(ModalCharacterComponent, {
+      width: '600px',
+      data: this.character,
+    });
   }
 }

@@ -15,20 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@characters/routes": [
-        "libs/characters/src/routes.ts"
-      ],
       "@characters/data-access": [
         "libs/characters/src/lib/data-access/src/index.ts"
       ],
-      "@characters/ui": [
-        "libs/characters/src/lib/ui/src/index.ts"
-      ],
+      "@characters/list": ["libs/characters/src/lib/feature-list/src/index.ts"],
+      "@characters/routes": ["libs/characters/src/routes.ts"],
+      "@characters/ui": ["libs/characters/src/lib/ui/src/index.ts"],
       "@characters/util/model": [
         "libs/characters/src/lib/util/src/lib/model/index.ts"
-      ],
-      "@characters/list": [
-        "libs/characters/src/lib/feature-list/src/index.ts"
       ],
       "@shared/ui": ["libs/shared/ui/src/lib/ui/index.ts"],
       "@shared/ui/navigation": [

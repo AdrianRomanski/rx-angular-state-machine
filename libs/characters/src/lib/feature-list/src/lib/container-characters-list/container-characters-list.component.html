@@ -7,7 +7,7 @@
       <div class="section-divider"></div>
       <p>Explore the detailed profiles of your favorite heroes and adventurers.</p>
     </div>
-    <div class="characters-container">
+    <div (click)="openCharacterModal()" class="characters-container">
       <characters-ui-card
         *ngFor="let card of cards"
         [data]="{

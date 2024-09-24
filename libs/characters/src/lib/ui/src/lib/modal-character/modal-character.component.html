@@ -1,0 +1,46 @@
+<shared-ui-template-modal class="character-card">
+  <shared-ui-template-modal-header header style="align-self: center">
+    <div class="header-section">
+       <h1>{{ data.name }}</h1>
+       <small>ID: {{ data.id }}</small>
+       <p class="faction">
+           <mat-icon>{{ data.faction === 'Horde' ? 'whatshot' : 'shield' }}</mat-icon>
+                                {{ data.faction }}
+            <span *ngIf="data.faction === 'Horde'">🔥 "For the Horde!"</span>
+            <span *ngIf="data.faction === 'Alliance'">🛡️ "For the Alliance!"</span>
+    </p>
+    </div>
+  </shared-ui-template-modal-header>
+  <div body>
+  <div class="content-section">
+    <div class="info-row">
+      <mat-icon class="icon">trending_up</mat-icon>
+      <span class="info-title">Level:</span> {{ data.level }}
+    </div>
+
+    <div class="info-row">
+      <mat-icon class="icon">group</mat-icon>
+      <span class="info-title">Race:</span> {{ data.race }}
+    </div>
+
+    <div class="info-row">
+      <mat-icon class="icon">class</mat-icon>
+      <span class="info-title">Class:</span> {{ data.class }}
+      <small class="lore">{{ classLore(data.class) }}</small>
+    </div>
+
+    <div class="info-row">
+      <mat-icon class="icon">build</mat-icon>
+      <span class="info-title">Profession:</span> {{ data.profession }} <i>(Master {{ data.profession.toLowerCase() }})</i>
+    </div>
+  </div>
+
+  <div class="lore-box">
+    <h3>Character Lore</h3>
+    <p>"{{ data.name }} is a {{ data.race }} {{ data.class }} known for their prowess in battle and their unmatched skills in {{ data.profession.toLowerCase() }}."</p>
+  </div>
+  </div>
+  <shared-ui-template-modal-footer footer>
+    <button mat-stroked-button mat-dialog-close sharedCloseBtn>Close</button>
+  </shared-ui-template-modal-footer>
+</shared-ui-template-modal>

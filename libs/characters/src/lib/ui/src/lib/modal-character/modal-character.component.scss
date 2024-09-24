@@ -1,0 +1,94 @@
+.character-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  margin: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header-section {
+  text-align: center;
+}
+
+.header-section h1 {
+  font-size: 30px;
+  color: #ff9800;
+  margin: 0;
+}
+
+.header-section small {
+  font-size: 14px;
+  color: #c7c7c7;
+}
+
+.faction {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.content-section {
+  margin-top: 20px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon {
+  color: #ff9800;
+  margin-right: 8px;
+}
+
+.info-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.lore {
+  color: #c7c7c7;
+  font-style: italic;
+}
+
+.lore-box {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.lore-box h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #ff9800;
+}
+
+.actions-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+button.mat-stroked-button {
+  border-color: #ff9800;
+  color: #ff9800;
+}
+
+button.mat-raised-button {
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff5722, #ff9800);
+}
