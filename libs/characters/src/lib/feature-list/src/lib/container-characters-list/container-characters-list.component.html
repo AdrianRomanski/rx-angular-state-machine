@@ -7,8 +7,8 @@
       <div class="section-divider"></div>
       <p>Explore the detailed profiles of your favorite heroes and adventurers.</p>
     </div>
-    <div (click)="openCharacterModal()" class="characters-container">
-      <characters-ui-card
+    <div  class="characters-container">
+      <characters-ui-card (click)="openCharacterModal()"
         *ngFor="let card of cards"
         [data]="{
             id: card.data.id,
@@ -26,6 +26,5 @@
       <p>For the Alliance! For the Horde!</p>
     </div>
   </div>
-
 </ng-container>
 

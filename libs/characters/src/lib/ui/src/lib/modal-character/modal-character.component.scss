@@ -33,6 +33,13 @@
   margin-top: 20px;
 }
 
+.info-row-wrapper {
+  display: flex;
+  flex-direction: row;
+  //align-items: center;
+  //margin-bottom: 10px;
+}
+
 .info-row {
   display: flex;
   align-items: center;
@@ -69,10 +76,21 @@
   color: #ff9800;
 }
 
-.actions-section {
-  display: flex;
-  justify-content: space-between;
+.abilities-section, .equipment-section {
   margin-top: 20px;
+}
+
+h3 {
+  color: #ff9800;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
 }
 
 button {

@@ -1,6 +1,7 @@
 /**ANGULAR*/
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatDialog } from '@angular/material/dialog';
 
 /**DEPENDENCIES*/
 import { Observable } from 'rxjs';
@@ -11,12 +12,12 @@ import { RxLet } from '@rx-angular/template/let';
 import { CharactersFacade } from '@characters/data-access';
 import { Character, Class, Faction, HordeRace, ListUI, Profession } from '@characters/util/model';
 import { UiCardComponent } from '@characters/ui';
+import { ModalCharacterComponent } from '@characters/ui';
+import { CardStateMachine } from '@characters/data-access';
 
 /**SHARED*/
 import { SharedBorderDirective } from '@shared/util/directives';
-import { CardStateMachine } from '../../../../data-access/src/lib/state/characters.model';
-import { MatDialog } from '@angular/material/dialog';
-import { ModalCharacterComponent } from '../../../../ui/src/lib/modal-character/modal-character.component';
+import { MOCK_CHARACTERS } from '../../../../data-access/src/lib/infrastructure/db.const';
 
 @Component({
   selector: 'characters-feature-list',
@@ -32,15 +33,7 @@ import { ModalCharacterComponent } from '../../../../ui/src/lib/modal-character/
   styleUrl: './container-characters-list.component.scss',
 })
 export class ContainerCharactersListComponent implements OnInit {
-    character: Character = {
-    id: '1',
-    name: 'Thrall',
-    level: 100,
-    faction: Faction.Horde,
-    race: HordeRace.Orc,
-    class: Class.Shaman,
-    profession: Profession.Blacksmithing,
-  };
+    character = MOCK_CHARACTERS[0];
 
   private readonly facade = inject(CharactersFacade);
 
@@ -51,6 +44,7 @@ export class ContainerCharactersListComponent implements OnInit {
 
   ngOnInit(): void {
     this.facade.findAll();
+    this.cards$.subscribe((v) => console.log('ui',v.map((s) => s.ui)));
   }
 
   openCharacterModal(): void {

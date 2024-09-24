@@ -8,7 +8,7 @@ export function calculateCharacterStatistics(
   return characters.reduce(
     (acc, character) => {
       acc.totalCharacters += 1;
-      acc.totalLevels += character.level;
+      acc.totalLevels += +character.level;
       if (character.faction === 'Alliance') {
         acc.allianceCount += 1;
       } else if (character.faction === 'Horde') {

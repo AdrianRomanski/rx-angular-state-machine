@@ -9,16 +9,20 @@ import { BackgroundUI, BorderUI } from '@shared/util/model';
   selector: '[sharedBox]'
 })
 export class SharedBoxDirective {
-  @Input() set sharedBoxBorder(borderUI: BorderUI) {
-    this.border = `${borderUI.size} ${borderUI.type} ${borderUI.color}`;
+  @Input() set sharedBoxBorder(borderUI: BorderUI | undefined) {
+    if(borderUI) {
+      this.border = `${borderUI.size} ${borderUI.type} ${borderUI.color}`;
+    }
   }
 
-  @Input() set sharedBoxBackground(backgroundUI: BackgroundUI) {
-    this.background = `linear-gradient(
-      ${backgroundUI.position},
-      ${backgroundUI.firstColor},
-      ${backgroundUI.secondColor}
+  @Input() set sharedBoxBackground(backgroundUI: BackgroundUI | undefined) {
+    if(backgroundUI) {
+     this.background = `linear-gradient(
+        ${backgroundUI.position},
+        ${backgroundUI.firstColor},
+        ${backgroundUI.secondColor}
     )`;
+    }
   }
 
   @HostBinding('style.border')

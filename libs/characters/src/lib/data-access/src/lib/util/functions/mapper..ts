@@ -1,27 +1,52 @@
 /**INTERNALS*/
 import { CharacterDomain } from '../../entity/character.entity';
+import { CardStateMachine } from '../../state/characters.model';
+import { classColor, factionBox, raceColor } from './ui';
 
 /**CHARACTERS*/
 import {
-  AllianceRace, CardData, CardUI,
+  AllianceRace,
+  CardData,
   Character,
-  Class, Faction,
+  Class,
+  EquipmentSlot,
+  Faction,
   HordeRace,
-  Profession
+  Profession, Rarity, StatType
 } from '@characters/util/model';
-import { classColor, factionBox, raceColor } from './ui';
-import { CardStateMachine } from '../../state/characters.model';
 
 export function mapDomainToCharacter(domain: CharacterDomain): Character {
   return {
     id: domain.id,
     name: domain.name,
-    level: domain.level,
+    level: +domain.level,
+    faction: Faction[domain.faction as keyof typeof Faction],
     race: mapToRace(domain.faction, domain.race),
     class: Class[domain.class as keyof typeof Class],
     profession: Profession[domain.profession as keyof typeof Profession],
-    faction: Faction[domain.faction as keyof typeof Faction]
-  }
+    health: +domain.health,
+    mana: +domain.mana,
+    strength: +domain.strength,
+    agility: +domain.agility,
+    intellect: +domain.intellect,
+    stamina: +domain.stamina,
+    armor: +domain.armor,
+    abilities: domain.abilities.map(ability => ({
+      name: ability.name,
+      description: ability.description,
+      cooldown: +ability.cooldown,
+    })),
+    biography: domain.biography,
+    equipment: domain.equipment.map(item => ({
+      name: item.name,
+      slot: EquipmentSlot[item.slot as keyof typeof EquipmentSlot],
+      rarity: Rarity[item.rarity as keyof typeof Rarity],
+      stats: item.stats.map(stat => ({
+        statType: StatType[stat.statType as keyof typeof StatType],
+        value: +stat.value,
+      })),
+    })),
+  };
 }
 
 export function mapDomainToCardUI(domain: CharacterDomain): CardData {
