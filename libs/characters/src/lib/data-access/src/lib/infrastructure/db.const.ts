@@ -1,11 +1,22 @@
 import { CharacterDomain } from '../entity/character.entity';
 
+// 45-60
+
+// 30 import hell @import hell -> composition -> state
+
+// managing subscription, etc etc local
+
+// rx angular theory/practice
+
+//
+
+
 export const MOCK_CHARACTERS: CharacterDomain[] = [
   {
     id: '1',
     name: 'Aldrin',
-    level: '30000',
-    faction: 'Horde',
+    level: '15',
+    faction: 'Alliance',
     race: 'Orc',
     class: 'Warrior',
     profession: 'Blacksmithing',

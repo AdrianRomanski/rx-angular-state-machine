@@ -12,8 +12,11 @@ import {
   EquipmentSlot,
   Faction,
   HordeRace,
-  Profession, Rarity, StatType
+  Profession,
+  Rarity,
+  StatType
 } from '@characters/util/model';
+import { CharacterModalActions } from '@shared/util/model';
 
 export function mapDomainToCharacter(domain: CharacterDomain): Character {
   return {
@@ -46,7 +49,16 @@ export function mapDomainToCharacter(domain: CharacterDomain): Character {
         value: +stat.value,
       })),
     })),
+    actions: mapToActions(Faction[domain.faction as keyof typeof Faction])
   };
+}
+
+export function mapToActions(faction: Faction): string[] {
+  if(faction === Faction.Alliance) {
+    return [CharacterModalActions.DELETE, CharacterModalActions.TRANSMOG]
+  } else {
+    return [CharacterModalActions.MOUNT, CharacterModalActions.GUILD]
+  }
 }
 
 export function mapDomainToCardUI(domain: CharacterDomain): CardData {

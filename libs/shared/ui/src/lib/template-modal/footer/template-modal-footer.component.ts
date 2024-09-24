@@ -1,10 +1,12 @@
 /**ANGULAR*/
 import {
   ChangeDetectionStrategy,
-  Component,
-  ContentChild,
-  ContentChildren, DestroyRef,
-  EventEmitter, inject,
+  Component, contentChild,
+  ContentChild, contentChildren,
+  ContentChildren,
+  DestroyRef,
+  EventEmitter,
+  inject,
   OnInit,
   Output,
   QueryList
@@ -25,6 +27,7 @@ import {
   SubmitButtonDirective,
 } from '@shared/util/directives';
 import { ActionStateMachine } from '@shared/util/model';
+import { rxEffects } from '@rx-angular/state/effects';
 
 @Component({
   selector: 'shared-ui-template-modal-footer',

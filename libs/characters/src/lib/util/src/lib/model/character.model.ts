@@ -6,7 +6,6 @@ export interface Character {
   race: HordeRace | AllianceRace;
   class: Class;
   profession: Profession;
-
   health: number;
   mana: number;
   strength: number;
@@ -14,16 +13,16 @@ export interface Character {
   intellect: number;
   stamina: number;
   armor: number;
-
   abilities: Ability[];
   biography: string;
   equipment: Equipment[];
+  actions: string[];
 }
 
 export interface Ability {
   name: string;
   description: string;
-  cooldown: number;  // Cooldown time in seconds
+  cooldown: number;
 }
 
 export interface Equipment {

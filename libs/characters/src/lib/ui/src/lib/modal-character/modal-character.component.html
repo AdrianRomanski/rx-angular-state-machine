@@ -1,5 +1,6 @@
 <shared-ui-template-modal class="character-card">
   <shared-ui-template-modal-header header style="align-self: center">
+    <!--    lore-header ui component-->
     <div class="header-section">
       <h1>{{ data.name }}</h1>
       <small>ID: {{ data.id }}</small>
@@ -26,12 +27,14 @@
       armor: data.armor
     }"></characters-ui-stats>
 
+    <!--    lore-section ui component-->
     <div class="lore-box">
       <h3>Character Lore</h3>
       <p>"{{ data.name }} is a {{ data.race }} {{ data.class }} known for their prowess in battle and their unmatched
         skills in {{ data.profession.toLowerCase() }}."</p>
     </div>
 
+    <!--    abilities-section ui component-->
     <div class="abilities-section">
       <h3>Abilities</h3>
       <ul>
@@ -41,6 +44,8 @@
       </ul>
     </div>
 
+
+<!--    equipment ui component-->
     <div class="equipment-section">
       <h3>Equipment</h3>
       <ul>
@@ -55,8 +60,15 @@
       </ul>
     </div>
   </div>
-
-  <shared-ui-template-modal-footer footer>
+  <shared-ui-template-modal-footer footer
+    (actionButtonClick)="onActionButtonClick($event)">
     <button mat-stroked-button mat-dialog-close sharedCloseBtn>Close</button>
+    <button *ngFor="let action of data.actions"
+      mat-button
+      sharedActionBtn
+      [action]="action"
+    >
+      {{ action }}
+    </button>
   </shared-ui-template-modal-footer>
 </shared-ui-template-modal>

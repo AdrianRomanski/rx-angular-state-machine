@@ -2,7 +2,7 @@
 import { inject, Injectable } from '@angular/core';
 
 /**DEPENDENCIES*/
-import { Observable, switchMap, tap } from 'rxjs';
+import { map, Observable, switchMap, tap } from 'rxjs';
 import { rxState } from '@rx-angular/state';
 import { rxActions } from '@rx-angular/state/actions';
 
@@ -15,11 +15,19 @@ import { HORDE_ACCENT } from '../util/const/accent';
 import { setFindAllState } from './characters.setter';
 
 /**CHARACTERS*/
-import { ListUI } from '@characters/util/model';
+import { Character, ListUI } from '@characters/util/model';
+import { mapDomainToCharacter, mapToCardStateMachine } from '../util/functions/mapper.';
+import { listAccent, listBorder } from '../util/functions/ui';
+import { CharactersStatistics } from '../model/statistics';
+import { calculateCharacterStatistics } from '../util/functions/statistics';
 
 @Injectable({ providedIn: 'root' })
 export class CharactersFacade {
-  private readonly actions = rxActions<{ findAll: void }>();
+
+  // for tommorrow open modal action
+  readonly actions = rxActions<{
+    findAll: void
+  }>();
   private readonly infrastructure = inject(CharactersInfrastructureService);
 
   private state = rxState<CharactersState>(({ set, connect }) => {
@@ -42,6 +50,11 @@ export class CharactersFacade {
 
   public findAll(): void {
     this.actions.findAll();
+  }
+
+  // thats fine
+  public findById(id: string): Observable<Character> {
+    return this.infrastructure.findById(id).pipe(map(mapDomainToCharacter))
   }
 
   private findAllEffect = this.actions.onFindAll(

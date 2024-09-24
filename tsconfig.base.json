@@ -34,7 +34,10 @@
       "@shared/util/directives": [
         "libs/shared/util/src/lib/directives/src/index.ts"
       ],
-      "@shared/util/model": ["libs/shared/util/src/lib/model/src/index.ts"]
+      "@shared/util/model": ["libs/shared/util/src/lib/model/src/index.ts"],
+      "@shared/util/functions": [
+        "libs/shared/util/src/lib/functions/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
