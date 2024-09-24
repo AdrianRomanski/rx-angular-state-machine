@@ -37,6 +37,24 @@ export class CharactersFacade {
         ui: { border: BORDER_STYLE_1_10, accent: HORDE_ACCENT },
       },
     });
+    connect(
+      'characters',
+      this.actions.findAll$.pipe(
+        switchMap(() => this.infrastructure.findAll().pipe(
+          map((characterDomains) => {
+            const stats: CharactersStatistics = calculateCharacterStatistics(characterDomains);
+            const level: number = stats.totalLevels / stats.totalCharacters;
+            return {
+              data: mapToCardStateMachine(characterDomains),
+              ui: {
+                border: listBorder(level),
+                accent: listAccent(stats.hordeCount, stats.allianceCount),
+              },
+            }
+          })
+        ))
+      )
+    )
   });
 
   public readonly listUI$: Observable<ListUI> = this.state.select(

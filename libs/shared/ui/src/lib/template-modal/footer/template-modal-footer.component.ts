@@ -9,12 +9,12 @@ import {
   inject,
   OnInit,
   Output,
-  QueryList
+  QueryList, viewChild, viewChildren
 } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 
 /**DEPENDENCIES*/
-import { merge, mergeAll, Observable } from 'rxjs';
+import { EMPTY, merge, mergeAll, Observable, switchMap, tap } from 'rxjs';
 
 /**INTERNALS*/
 import { TemplateModalFooterBridge } from './template-modal-footer-bridge.interface';
@@ -43,18 +43,16 @@ import { rxEffects } from '@rx-angular/state/effects';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TemplateModalFooterComponent implements OnInit, TemplateModalFooterBridge {
+export class TemplateModalFooterComponent implements TemplateModalFooterBridge {
   private readonly destroyRef = inject(DestroyRef);
 
-  @ContentChild(SubmitButtonDirective, { static: true })
-  submitButtonDirective!: SubmitButtonDirective;
+  submitButtonDirective = contentChild(SubmitButtonDirective);
+  submitButtonDirective$ = toObservable(this.submitButtonDirective);
+  closeButtonDirective = contentChild(CloseButtonDirective);
+  closeButtonDirective$ = toObservable(this.closeButtonDirective);
 
-  @ContentChild(CloseButtonDirective, { static: true })
-  closeButtonDirective!: CloseButtonDirective;
-
-  // @ts-expect-error
-  @ContentChildren(ActionButtonDirective, { static: true })
-  actionButtonDirectives!: QueryList<ActionButtonDirective>;
+  actionButtonDirectives = contentChildren(ActionButtonDirective);
+  actionButtonDirectives$ = toObservable(this.actionButtonDirectives);
 
   @Output()
   closeButtonClick = new EventEmitter<void>();
@@ -65,34 +63,33 @@ export class TemplateModalFooterComponent implements OnInit, TemplateModalFooter
   @Output()
   actionButtonClick = new EventEmitter<ActionStateMachine<any>>();
 
-  ngOnInit(): void {
-    this.closeButtonListener();
-    this.submitButtonListener();
-    this.actionButtonsListener();
-  }
-
-  private submitButtonListener(): void {
-    this.submitButtonDirective?.submitButtonClick
-      .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe(() => this.submitButtonClick.emit());
-  }
-
-  private closeButtonListener(): void {
-    this.closeButtonDirective?.closeButtonClick
-       .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe(() => this.closeButtonClick.emit());
-  }
-
-  private actionButtonsListener(): void {
-    const actions$: Observable<string>[] = this.actionButtonDirectives.map(
-      (actionButton: ActionButtonDirective) => {
-        return actionButton.actionButtonClick.asObservable();
-      },
+  readonly effects = rxEffects(({ register }) => {
+    register(
+      this.submitButtonDirective$.pipe(
+        switchMap(dir => dir?.submitButtonClick ?? EMPTY)
+      ),
+      () => this.submitButtonClick.emit()
     );
-    merge(actions$)
-      .pipe(mergeAll(),takeUntilDestroyed(this.destroyRef))
-      .subscribe((action: string): void => {
-        this.actionButtonClick.emit({ action });
-      });
-  }
+    register(
+      this.closeButtonDirective$.pipe(
+        switchMap(dir => dir?.closeButtonClick ?? EMPTY)
+      ),
+      () => this.submitButtonClick.emit()
+    );
+    register(
+      this.actionButtonDirectives$.pipe(
+        switchMap(buttons => merge(
+          ...buttons.map(
+            (actionButton: ActionButtonDirective) => {
+              return actionButton.actionButtonClick.pipe(
+                tap(action => {
+                  this.actionButtonClick.emit({ action });
+                })
+              )
+            },
+          )
+        ))
+      )
+    )
+  })
 }

@@ -1,12 +1,15 @@
 /**ANGULAR*/
-import { Directive, HostBinding, Input } from '@angular/core';
+import { computed, Directive, HostBinding, input, Input } from '@angular/core';
 
 /**SHARED*/
 import { BorderUI } from '@shared/util/model';
 
 @Directive({
   standalone: true,
-  selector: '[sharedBorder]'
+  selector: '[sharedBorder]',
+  host: {
+    '[style.border]': 'borderStyle()'
+  }
 })
 export class SharedBorderDirective {
 
