@@ -50,7 +50,7 @@ export class ContainerCharactersListComponent implements OnInit {
    constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
-    this.facade.actions.findAll();
+    this.facade.findAll();
   }
 
   openCharacterModal(): void {
