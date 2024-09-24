@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "nx": "npx",
-    "start": "nx run rx-angular-state-machine:serve"
+    "start-wow": "nx run world-of-warcraft:serve"
   },
   "private": true,
   "dependencies": {

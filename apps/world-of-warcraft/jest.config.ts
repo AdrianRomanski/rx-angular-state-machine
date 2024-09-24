@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'rx-angular-state-machine',
+  displayName: 'world-of-warcraft',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/rx-angular-state-machine',
+  coverageDirectory: '../../coverage/apps/world-of-warcraft',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

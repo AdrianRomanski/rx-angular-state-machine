@@ -15,13 +15,13 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome rx-angular-state-machine'
+      'Welcome world-of-warcraft'
     );
   });
 
   it(`should have as title 'rx-angular-state-machine'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('rx-angular-state-machine');
+    expect(app.title).toEqual('world-of-warcraft');
   });
 });

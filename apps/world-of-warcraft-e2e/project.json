@@ -1,0 +1,9 @@
+{
+  "name": "world-of-warcraft-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/world-of-warcraft-e2e/src",
+  "implicitDependencies": ["world-of-warcraft"],
+  "// targets": "to see all targets run: nx show project world-of-warcraft-e2e --web",
+  "targets": {}
+}
