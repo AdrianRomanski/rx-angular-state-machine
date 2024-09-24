@@ -4,7 +4,7 @@ export const MOCK_CHARACTERS: CharacterDomain[] = [
   {
     id: '1',
     name: 'Aldrin',
-    level: '5',
+    level: '30000',
     faction: 'Horde',
     race: 'Orc',
     class: 'Warrior',

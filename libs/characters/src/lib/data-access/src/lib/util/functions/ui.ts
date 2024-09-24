@@ -12,13 +12,14 @@ import {
   BORDER_STYLE_91_100
 } from '../const/border';
 
+import { RACE_COLORS } from '../const/race';
+import { CLASS_COLORS } from '../const/class';
+import { FACTION_BOX } from '../const/faction';
+
 /**SHARED*/
 import { BorderUI, BoxUI } from '@shared/util/model';
 import { ALLIANCE_ACCENT, EQUALITY_ACCENT, HORDE_ACCENT } from '../const/accent';
 import { AllianceRace, Class, Faction, HordeRace } from '@characters/util/model';
-import { RACE_COLORS } from '../const/race';
-import { CLASS_COLORS } from '../const/class';
-import { FACTION_BOX } from '../const/faction';
 
 export function listBorder(level: number): BorderUI {
   switch (true) {

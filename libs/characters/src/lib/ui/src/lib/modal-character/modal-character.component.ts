@@ -9,17 +9,20 @@ import {
   TemplateModalHeaderComponent
 } from '@shared/ui/template-modal';
 import { CloseButtonDirective } from '@shared/util/directives';
+import { UiCharacterStatsComponent } from '../ui-character-stats/ui-character-stats.component';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'characters-modal-character',
   standalone: true,
-  imports: [CommonModule, MatIcon, MatDialogModule, TemplateModalComponent, TemplateModalHeaderComponent, TemplateModalFooterComponent, CloseButtonDirective],
+  imports: [CommonModule, MatIcon, MatDialogModule, TemplateModalComponent, TemplateModalHeaderComponent, TemplateModalFooterComponent, CloseButtonDirective, UiCharacterStatsComponent, MatButton],
   templateUrl: './modal-character.component.html',
   styleUrl: './modal-character.component.scss',
 })
 export class ModalCharacterComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public data: Character) {}
 
+  // refactor it to pipe
   classLore(characterClass: Class): string {
     switch (characterClass) {
       case Class.Warrior:

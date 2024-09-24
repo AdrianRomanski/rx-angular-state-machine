@@ -1,0 +1,26 @@
+.content-section {
+  margin-top: 20px;
+}
+
+.info-row-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.icon {
+  color: #ff9800;
+  margin-right: 8px;
+}

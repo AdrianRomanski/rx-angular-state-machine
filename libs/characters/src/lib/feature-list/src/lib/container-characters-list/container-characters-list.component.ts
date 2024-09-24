@@ -10,7 +10,7 @@ import { RxLet } from '@rx-angular/template/let';
 
 /**CHARACTERS*/
 import { CharactersFacade } from '@characters/data-access';
-import { Character, Class, Faction, HordeRace, ListUI, Profession } from '@characters/util/model';
+import { ListUI } from '@characters/util/model';
 import { UiCardComponent } from '@characters/ui';
 import { ModalCharacterComponent } from '@characters/ui';
 import { CardStateMachine } from '@characters/data-access';
@@ -33,7 +33,7 @@ import { MOCK_CHARACTERS } from '../../../../data-access/src/lib/infrastructure/
   styleUrl: './container-characters-list.component.scss',
 })
 export class ContainerCharactersListComponent implements OnInit {
-    character = MOCK_CHARACTERS[0];
+  character = MOCK_CHARACTERS[0];
 
   private readonly facade = inject(CharactersFacade);
 
@@ -49,7 +49,7 @@ export class ContainerCharactersListComponent implements OnInit {
 
   openCharacterModal(): void {
     this.dialog.open(ModalCharacterComponent, {
-      width: '600px',
+      width: '700px',
       data: this.character,
     });
   }
