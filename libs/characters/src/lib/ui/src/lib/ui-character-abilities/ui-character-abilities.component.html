@@ -1,0 +1,8 @@
+<div class="abilities-section">
+  <h3>Abilities</h3>
+  <ul>
+    <li *ngFor="let ability of data.abilities">
+      <strong>{{ ability.name }}</strong>: {{ ability.description }} (Cooldown: {{ ability.cooldown }}s)
+    </li>
+  </ul>
+</div>

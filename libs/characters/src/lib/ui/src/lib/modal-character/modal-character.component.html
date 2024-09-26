@@ -1,6 +1,6 @@
 <shared-ui-template-modal class="character-card">
   <shared-ui-template-modal-header header style="align-self: center">
-    <!--    lore-header ui component-->
+    <!--live coding-->
     <div class="header-section">
       <h1>{{ data.name }}</h1>
       <small>ID: {{ data.id }}</small>
@@ -14,61 +14,43 @@
   </shared-ui-template-modal-header>
   <div body>
     <characters-ui-stats [data]="{
-      level: data.level,
-      race: data.race,
-      class: data.class,
-      profession: data.profession,
-      health: data.health,
-      mana: data.mana,
-      strength: data.strength,
-      agility: data.agility,
-      intellect: data.intellect,
-      stamina: data.stamina,
-      armor: data.armor
+        level: data.level,
+        race: data.race,
+        class: data.class,
+        profession: data.profession,
+        health: data.health,
+        mana: data.mana,
+        strength: data.strength,
+        agility: data.agility,
+        intellect: data.intellect,
+        stamina: data.stamina,
+        armor: data.armor
     }"></characters-ui-stats>
-
-    <!--    lore-section ui component-->
-    <div class="lore-box">
-      <h3>Character Lore</h3>
-      <p>"{{ data.name }} is a {{ data.race }} {{ data.class }} known for their prowess in battle and their unmatched
-        skills in {{ data.profession.toLowerCase() }}."</p>
-    </div>
-
-    <!--    abilities-section ui component-->
-    <div class="abilities-section">
-      <h3>Abilities</h3>
-      <ul>
-        <li *ngFor="let ability of data.abilities">
-          <strong>{{ ability.name }}</strong>: {{ ability.description }} (Cooldown: {{ ability.cooldown }}s)
-        </li>
-      </ul>
-    </div>
-
-
-<!--    equipment ui component-->
-    <div class="equipment-section">
-      <h3>Equipment</h3>
-      <ul>
-        <li *ngFor="let item of data.equipment">
-          <strong>{{ item.slot }}:</strong> {{ item.name }} (Rarity: {{ item.rarity }}) - Stats:
-          <ul>
-            <li *ngFor="let stat of item.stats">
-              {{ stat.statType }}: {{ stat.value }}
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+    <characters-ui-lore [data]="{
+        name: data.name,
+        race: data.race,
+        class: data.class,
+        profession: data.profession
+    }">
+    </characters-ui-lore>
+    <characters-ui-abilities [data]="{
+        abilities: data.abilities
+    }">
+    </characters-ui-abilities>
+    <characters-ui-equipment [data]="{
+        equipment: data.equipment
+    }">
+    ></characters-ui-equipment>
   </div>
   <shared-ui-template-modal-footer footer
     (actionButtonClick)="onActionButtonClick($event)">
-    <button mat-stroked-button mat-dialog-close sharedCloseBtn>Close</button>
     <button *ngFor="let action of data.actions"
-      mat-button
-      sharedActionBtn
-      [action]="action"
-    >
-      {{ action }}
+        mat-button
+        sharedActionBtn
+        [action]="action"
+      >
+        {{ action }}
     </button>
+    <button mat-stroked-button mat-dialog-close sharedCloseBtn>Close</button>
   </shared-ui-template-modal-footer>
 </shared-ui-template-modal>

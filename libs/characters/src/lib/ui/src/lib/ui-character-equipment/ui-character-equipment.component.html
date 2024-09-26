@@ -1,0 +1,13 @@
+<div class="equipment-section">
+  <h3>Equipment</h3>
+  <ul>
+    <li *ngFor="let item of data.equipment">
+      <strong>{{ item.slot }}:</strong> {{ item.name }} (Rarity: {{ item.rarity }}) - Stats:
+      <ul>
+        <li *ngFor="let stat of item.stats">
+          {{ stat.statType }}: {{ stat.value }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

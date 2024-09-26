@@ -1,15 +1,8 @@
+/**INTERNALS*/
 import { CharacterDomain } from '../entity/character.entity';
 
-// 45-60
-
-// 30 import hell @import hell -> composition -> state
-
-// managing subscription, etc etc local
-
-// rx angular theory/practice
-
-//
-
+/**CHARACTERS*/
+import { EquipmentSlot } from '@characters/util/model';
 
 export const MOCK_CHARACTERS: CharacterDomain[] = [
   {
@@ -33,8 +26,8 @@ export const MOCK_CHARACTERS: CharacterDomain[] = [
     ],
     biography: 'Aldrin is a fearless Orc Warrior known for his strength and bravery on the battlefield.',
     equipment: [
-      { name: 'Iron Sword', slot: 'Main Hand', rarity: 'Rare', stats: [{ statType: 'Damage', value: '10' }] },
-      { name: 'Iron Shield', slot: 'Off Hand', rarity: 'Common', stats: [{ statType: 'Armor', value: '15' }] },
+      { name: 'Iron Sword', slot: EquipmentSlot.Weapon as string, rarity: 'Rare', stats: [{ statType: 'Damage', value: '10' }] },
+      { name: 'Iron Shield', slot: EquipmentSlot.Shield as string, rarity: 'Common', stats: [{ statType: 'Armor', value: '15' }] },
     ],
   },
   {
@@ -56,10 +49,10 @@ export const MOCK_CHARACTERS: CharacterDomain[] = [
       { name: 'Backstab', description: 'Deals damage to the target and stuns them.', cooldown: '20' },
       { name: 'Evasion', description: 'Increases dodge chance for a short duration.', cooldown: '30' },
     ],
-    biography: 'Lirael is a masterful Gnome sRogue known for her agility and cunning tactics.',
+    biography: 'Lirael is a masterful Gnome Rogue known for her agility and cunning tactics.',
     equipment: [
-      { name: 'Dagger of Shadows', slot: 'Main Hand', rarity: 'Epic', stats: [{ statType: 'Damage', value: '8' }] },
-      { name: 'Cloak of Stealth', slot: 'Back', rarity: 'Uncommon', stats: [{ statType: 'Agility', value: '5' }] },
+      { name: 'Dagger of Shadows', slot: EquipmentSlot.Weapon as string, rarity: 'Epic', stats: [{ statType: 'Damage', value: '8' }] },
+      { name: 'Cloak of Stealth', slot: EquipmentSlot.Chest as string, rarity: 'Uncommon', stats: [{ statType: 'Agility', value: '5' }] },
     ],
   },
   {
@@ -83,8 +76,8 @@ export const MOCK_CHARACTERS: CharacterDomain[] = [
     ],
     biography: 'Thrain is a wise Tauren Druid known for his healing abilities and deep connection with nature.',
     equipment: [
-      { name: 'Staff of the Forest', slot: 'Main Hand', rarity: 'Rare', stats: [{ statType: 'Intellect', value: '10' }] },
-      { name: 'Druidic Robes', slot: 'Chest', rarity: 'Uncommon', stats: [{ statType: 'Health', value: '20' }] },
+      { name: 'Staff of the Forest', slot: EquipmentSlot.Weapon as string, rarity: 'Rare', stats: [{ statType: 'Intellect', value: '10' }] },
+      { name: 'Druidic Robes', slot: EquipmentSlot.Chest as string, rarity: 'Uncommon', stats: [{ statType: 'Health', value: '20' }] },
     ],
   },
   {
@@ -108,8 +101,8 @@ export const MOCK_CHARACTERS: CharacterDomain[] = [
     ],
     biography: 'Riven is a noble Human Paladin who fights for justice and protects the weak.',
     equipment: [
-      { name: 'Holy Avenger', slot: 'Main Hand', rarity: 'Legendary', stats: [{ statType: 'Damage', value: '15' }] },
-      { name: 'Plate Armor', slot: 'Chest', rarity: 'Epic', stats: [{ statType: 'Armor', value: '25' }] },
+      { name: 'Holy Avenger', slot: EquipmentSlot.Weapon as string, rarity: 'Legendary', stats: [{ statType: 'Damage', value: '15' }] },
+      { name: 'Plate Armor', slot: EquipmentSlot.Chest as string, rarity: 'Epic', stats: [{ statType: 'Armor', value: '25' }] },
     ],
   },
   {
@@ -133,8 +126,8 @@ export const MOCK_CHARACTERS: CharacterDomain[] = [
     ],
     biography: 'Elowen is an enigmatic Draenei Mage who wields powerful arcane magic.',
     equipment: [
-      { name: 'Staff of Arcane Power', slot: 'Main Hand', rarity: 'Epic', stats: [{ statType: 'Intellect', value: '12' }] },
-      { name: 'Robe of the Arcane', slot: 'Chest', rarity: 'Rare', stats: [{ statType: 'Mana', value: '30' }] },
+      { name: 'Staff of Arcane Power', slot: EquipmentSlot.Weapon as string, rarity: 'Epic', stats: [{ statType: 'Intellect', value: '12' }] },
+      { name: 'Robe of the Arcane', slot: EquipmentSlot.Chest as string, rarity: 'Rare', stats: [{ statType: 'Mana', value: '30' }] },
     ],
   },
   {
@@ -158,8 +151,8 @@ export const MOCK_CHARACTERS: CharacterDomain[] = [
     ],
     biography: 'Gromak is an Undead Warlock who harnesses the powers of dark magic.',
     equipment: [
-      { name: 'Staff of Dark Magic', slot: 'Main Hand', rarity: 'Rare', stats: [{ statType: 'Intellect', value: '10' }] },
-      { name: 'Robe of Shadows', slot: 'Chest', rarity: 'Uncommon', stats: [{ statType: 'Armor', value: '15' }] },
+      { name: 'Staff of Dark Magic', slot: EquipmentSlot.Weapon as string, rarity: 'Rare', stats: [{ statType: 'Intellect', value: '10' }] },
+      { name: 'Robe of Shadows', slot: EquipmentSlot.Chest as string, rarity: 'Uncommon', stats: [{ statType: 'Armor', value: '15' }] },
     ],
   },
   {
@@ -183,8 +176,8 @@ export const MOCK_CHARACTERS: CharacterDomain[] = [
     ],
     biography: 'Thalia is a compassionate Human Priest dedicated to healing her allies.',
     equipment: [
-      { name: 'Staff of the Light', slot: 'Main Hand', rarity: 'Epic', stats: [{ statType: 'Intellect', value: '10' }] },
-      { name: 'Lightforged Robe', slot: 'Chest', rarity: 'Rare', stats: [{ statType: 'Health', value: '20' }] },
+      { name: 'Staff of the Light', slot: EquipmentSlot.Weapon as string, rarity: 'Epic', stats: [{ statType: 'Intellect', value: '10' }] },
+      { name: 'Lightforged Robe', slot: EquipmentSlot.Chest as string, rarity: 'Rare', stats: [{ statType: 'Health', value: '20' }] },
     ],
   },
   {
@@ -208,108 +201,109 @@ export const MOCK_CHARACTERS: CharacterDomain[] = [
     ],
     biography: 'Zara is a fierce Goblin Warrior known for her agility and quick reflexes.',
     equipment: [
-      { name: 'Twin Blades', slot: 'Main Hand', rarity: 'Epic', stats: [{ statType: 'Damage', value: '18' }] },
-      { name: 'Demon Hunter Armor', slot: 'Chest', rarity: 'Rare', stats: [{ statType: 'Agility', value: '12' }] },
+      { name: 'Twin Blades of Destruction', slot: EquipmentSlot.Weapon as string, rarity: 'Legendary', stats: [{ statType: 'Damage', value: '20' }] },
+      { name: 'Goblin Battle Armor', slot: EquipmentSlot.Chest as string, rarity: 'Epic', stats: [{ statType: 'Armor', value: '25' }] },
     ],
   },
   {
     id: '9',
-    name: 'Kaelith',
-    level: '10',
+    name: 'Kael',
+    level: '5',
     faction: 'Alliance',
-    race: 'Dwarf',
+    race: 'Night Elf',
     class: 'Hunter',
-    profession: 'Mining',
-    health: '140',
-    mana: '60',
+    profession: 'Leatherworking',
+    health: '110',
+    mana: '40',
     strength: '12',
-    agility: '20',
+    agility: '22',
     intellect: '8',
-    stamina: '16',
-    armor: '22',
+    stamina: '10',
+    armor: '12',
     abilities: [
-      { name: 'Arcane Shot', description: 'Fires an arcane arrow at the enemy.', cooldown: '10' },
-      { name: 'Feign Death', description: 'Pretends to be dead, avoiding damage.', cooldown: '20' },
+      { name: 'Arcane Shot', description: 'Deals arcane damage to the target.', cooldown: '8' },
+      { name: 'Multi-Shot', description: 'Fires multiple arrows at nearby enemies.', cooldown: '12' },
     ],
-    biography: 'Kaelith is a skilled Dwarf Hunter, famed for his tracking and archery skills.',
+    biography: 'Kael is a skilled Night Elf Hunter who excels at long-range combat.',
     equipment: [
-      { name: 'Longbow of the Elves', slot: 'Main Hand', rarity: 'Epic', stats: [{ statType: 'Damage', value: '12' }] },
-      { name: 'Camouflage Cloak', slot: 'Back', rarity: 'Rare', stats: [{ statType: 'Agility', value: '8' }] },
+      { name: 'Longbow of Precision', slot: EquipmentSlot.Weapon as string, rarity: 'Epic', stats: [{ statType: 'Agility', value: '12' }] },
+      { name: 'Hunter\'s Vest', slot: EquipmentSlot.Chest as string, rarity: 'Rare', stats: [{ statType: 'Stamina', value: '8' }] },
     ],
   },
   {
     id: '10',
-    name: 'Rashaad',
-    level: '6',
+    name: 'Morgana',
+    level: '9',
     faction: 'Horde',
     race: 'Troll',
     class: 'Shaman',
-    profession: 'Herbalism',
-    health: '155',
-    mana: '70',
-    strength: '14',
-    agility: '10',
-    intellect: '20',
+    profession: 'Jewelcrafting',
+    health: '130',
+    mana: '80',
+    strength: '10',
+    agility: '8',
+    intellect: '25',
     stamina: '12',
-    armor: '28',
+    armor: '18',
     abilities: [
-      { name: 'Lightning Bolt', description: 'Launches a bolt of lightning at the enemy.', cooldown: '8' },
-      { name: 'Healing Wave', description: 'Heals a target over time.', cooldown: '15' },
+      { name: 'Chain Lightning', description: 'Strikes multiple enemies with lightning.', cooldown: '15' },
+      { name: 'Healing Stream', description: 'Summons a totem that heals nearby allies.', cooldown: '20' },
     ],
-    biography: 'Rashaad is a cunning Troll Shaman who commands the powers of nature.',
+    biography: 'Morgana is a powerful Troll Shaman who channels the elemental forces to aid her allies.',
     equipment: [
-      { name: 'Totem of the Elements', slot: 'Main Hand', rarity: 'Uncommon', stats: [{ statType: 'Intellect', value: '7' }] },
-      { name: 'Shaman Armor', slot: 'Chest', rarity: 'Rare', stats: [{ statType: 'Health', value: '25' }] },
+      { name: 'Totem of the Storm', slot: EquipmentSlot.Weapon as string, rarity: 'Epic', stats: [{ statType: 'Intellect', value: '14' }] },
+      { name: 'Stormcaller Armor', slot: EquipmentSlot.Chest as string, rarity: 'Rare', stats: [{ statType: 'Armor', value: '18' }] },
     ],
   },
   {
     id: '11',
-    name: 'Xandria',
-    level: '9',
+    name: 'Darius',
+    level: '14',
     faction: 'Alliance',
-    race: 'Gnome',
-    class: 'Mage',
-    profession: 'Engineering',
-    health: '110',
-    mana: '100',
-    strength: '5',
-    agility: '8',
-    intellect: '30',
-    stamina: '9',
-    armor: '10',
+    race: 'Dwarf',
+    class: 'Paladin',
+    profession: 'Mining',
+    health: '175',
+    mana: '35',
+    strength: '25',
+    agility: '10',
+    intellect: '12',
+    stamina: '22',
+    armor: '40',
     abilities: [
-      { name: 'Fireball', description: 'Launches a fiery projectile at the enemy.', cooldown: '10' },
-      { name: 'Teleport', description: 'Teleports to a nearby location.', cooldown: '30' },
+      { name: 'Judgment', description: 'Judges the target, dealing holy damage.', cooldown: '10' },
+      { name: 'Hammer of Justice', description: 'Stuns the target.', cooldown: '20' },
     ],
-    biography: 'Xandria is a brilliant Gnome Mage known for her inventions and spellcasting.',
+    biography: 'Darius is a stoic Dwarf Paladin who stands as a bulwark against evil.',
     equipment: [
-      { name: 'Wand of Fire', slot: 'Main Hand', rarity: 'Rare', stats: [{ statType: 'Intellect', value: '12' }] },
-      { name: 'Robe of the Arcane', slot: 'Chest', rarity: 'Uncommon', stats: [{ statType: 'Armor', value: '8' }] },
+      { name: 'Hammer of the Righteous', slot: EquipmentSlot.Weapon as string, rarity: 'Legendary', stats: [{ statType: 'Damage', value: '20' }] },
+      { name: 'Paladin Plate', slot: EquipmentSlot.Chest as string, rarity: 'Epic', stats: [{ statType: 'Armor', value: '30' }] },
     ],
   },
   {
     id: '12',
-    name: 'Brom',
-    level: '5',
+    name: 'Naria',
+    level: '13',
     faction: 'Horde',
-    race: 'Tauren',
-    class: 'Warrior',
-    profession: 'Mining',
-    health: '160',
+    race: 'Blood Elf',
+    class: 'Hunter',
+    profession: 'Skinning',
+    health: '120',
     mana: '50',
-    strength: '25',
-    agility: '8',
-    intellect: '7',
-    stamina: '18',
-    armor: '30',
+    strength: '15',
+    agility: '30',
+    intellect: '10',
+    stamina: '12',
+    armor: '16',
     abilities: [
-      { name: 'Death Strike', description: 'Deals damage and heals for a percentage of damage done.', cooldown: '12' },
-      { name: 'Raise Dead', description: 'Raises a fallen enemy as an undead minion.', cooldown: '60' },
+      { name: 'Serpent Sting', description: 'Deals nature damage over time.', cooldown: '10' },
+      { name: 'Rapid Fire', description: 'Increases attack speed for a short time.', cooldown: '20' },
     ],
-    biography: 'Brom is a formidable Tauren Warrior, feared for his dark powers and combat skills.',
+    biography: 'Naria is a swift and agile Blood Elf Hunter, known for her deadly precision.',
     equipment: [
-      { name: 'Runeblade of the Undead', slot: 'Main Hand', rarity: 'Legendary', stats: [{ statType: 'Damage', value: '20' }] },
-      { name: 'Death Knight Armor', slot: 'Chest', rarity: 'Rare', stats: [{ statType: 'Armor', value: '35' }] },
+      { name: 'Bow of the Phoenix', slot: EquipmentSlot.Weapon as string, rarity: 'Legendary', stats: [{ statType: 'Agility', value: '18' }] },
+      { name: 'Phoenix Armor', slot: EquipmentSlot.Chest as string, rarity: 'Epic', stats: [{ statType: 'Armor', value: '22' }] },
     ],
   },
 ];
+
