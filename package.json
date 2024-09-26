@@ -4,9 +4,7 @@
   "license": "MIT",
   "scripts": {
     "nx": "npx",
-    "start-wow": "nx run world-of-warcraft:serve",
-    "generate-modal-race": "npx nx g @nx/angular:component libs/characters/src/lib/ui/src/lib/modal-character-race/modal-character-race",
-    "generate-modal-class": "npx nx g @nx/angular:component libs/characters/src/lib/ui/src/lib/modal-character-class/modal-character-class"
+    "start-wow": "nx run world-of-warcraft:serve"
   },
   "private": true,
   "dependencies": {
