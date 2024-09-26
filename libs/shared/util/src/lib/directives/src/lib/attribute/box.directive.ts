@@ -12,6 +12,7 @@ export class SharedBoxDirective {
   @Input() set sharedBoxBorder(borderUI: BorderUI | undefined) {
     if(borderUI) {
       this.border = `${borderUI.size} ${borderUI.type} ${borderUI.color}`;
+      this.borderRadius = borderUI.radius;
     }
   }
 
@@ -21,13 +22,20 @@ export class SharedBoxDirective {
         ${backgroundUI.position},
         ${backgroundUI.firstColor},
         ${backgroundUI.secondColor}
-    )`;
+     )`;
+     this.color = backgroundUI.fontColor;
     }
   }
 
   @HostBinding('style.border')
   border = `10px solid blue`;
 
+  @HostBinding('style.border-radius')
+  borderRadius = `5px`;
+
   @HostBinding('style.background')
   background = `linear-gradient(145deg, #2e518b, #3b64a5)`;
+
+  @HostBinding('style.color')
+  color = `white`;
 }

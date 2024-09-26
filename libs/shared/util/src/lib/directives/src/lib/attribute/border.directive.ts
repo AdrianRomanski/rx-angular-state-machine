@@ -1,5 +1,5 @@
 /**ANGULAR*/
-import { computed, Directive, HostBinding, input, Input } from '@angular/core';
+import { computed, Directive, input } from '@angular/core';
 
 /**SHARED*/
 import { BorderUI } from '@shared/util/model';
@@ -13,10 +13,9 @@ import { BorderUI } from '@shared/util/model';
 })
 export class SharedBorderDirective {
 
-  sharedBorder = input<BorderUI>({ size: '10px', type: 'solid', color: 'blue' });
+  sharedBorder = input<BorderUI>({ size: '10px', type: 'solid', color: 'blue', radius: '15px' });
 
   borderStyle = computed(() => {
-    console.log('border changed', this.sharedBorder());
     return `${this.sharedBorder().size} ${this.sharedBorder().type} ${this.sharedBorder().color}`
   });
 }

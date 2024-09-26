@@ -1,15 +1,23 @@
 <shared-ui-template-modal class="character-card">
   <shared-ui-template-modal-header header style="align-self: center">
     <!--live coding-->
-    <div class="header-section">
+    <div
+      [ngClass]="data.faction === 'Horde' ? 'horde-info' : 'alliance-info'" class="header-section">
       <h1>{{ data.name }}</h1>
       <small>ID: {{ data.id }}</small>
       <p class="faction">
-        <mat-icon>{{ data.faction === 'Horde' ? 'whatshot' : 'shield' }}</mat-icon>
-        {{ data.faction }}
-        <span *ngIf="data.faction === 'Horde'">🔥 "For the Horde!"</span>
-        <span *ngIf="data.faction === 'Alliance'">🛡️ "For the Alliance!"</span>
+        <mat-icon
+          >
+          {{ data.faction === 'Horde' ? 'star' : 'star_border' }}
+        </mat-icon>
+        <span
+          *ngIf="data.faction === 'Horde'"
+        >For the Horde!</span>
+        <span
+          *ngIf="data.faction === 'Alliance'"
+        >For the Alliance!</span>
       </p>
+      <p>{{data.biography}}</p>
     </div>
   </shared-ui-template-modal-header>
   <div body>

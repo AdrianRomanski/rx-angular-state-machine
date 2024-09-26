@@ -110,3 +110,16 @@ button.mat-raised-button {
 button:hover {
   background: linear-gradient(90deg, #ff5722, #ff9800);
 }
+
+
+.horde-info {
+  color: #c9302c; /* Horde theme color */
+  background-color: rosybrown;
+  border-radius: 25px;
+}
+
+.alliance-info {
+  color: #0071bc; /* Alliance theme color */
+  background-color: #58a6ff;
+  border-radius: 25px;
+}

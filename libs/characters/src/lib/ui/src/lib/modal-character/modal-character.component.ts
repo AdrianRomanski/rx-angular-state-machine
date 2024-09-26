@@ -22,7 +22,7 @@ import {
   TemplateModalFooterComponent,
   TemplateModalHeaderComponent
 } from '@shared/ui/template-modal';
-import { ActionButtonDirective, CloseButtonDirective } from '@shared/util/directives';
+import { ActionButtonDirective, CloseButtonDirective, SharedBorderDirective } from '@shared/util/directives';
 import { ActionStateMachine, CharacterModalActions } from '@shared/util/model';
 import { assertUnreachable } from '@shared/util/functions';
 import { CharactersFacade } from '@characters/data-access';
@@ -48,6 +48,7 @@ type DialogFooterActions = ActionStateMachine<CharacterModalActions>;
     UiCharacterLoreComponent,
     UiCharacterAbilitiesComponent,
     UiCharacterEquipmentComponent,
+    SharedBorderDirective,
   ],
   templateUrl: './modal-character.component.html',
   styleUrl: './modal-character.component.scss',
