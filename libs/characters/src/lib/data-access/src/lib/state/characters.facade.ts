@@ -7,28 +7,30 @@ import { rxState } from '@rx-angular/state';
 import { rxActions } from '@rx-angular/state/actions';
 
 /**INTERNALS*/
-import { CharacterDomain } from '../entity/character.entity';
 import { CharactersInfrastructureService } from '../infrastructure/characters-infrastructure.service';
 import { CardStateMachine, CharactersState } from './characters.model';
 import { BORDER_STYLE_1_10 } from '../util/const/border';
 import { HORDE_ACCENT } from '../util/const/accent';
-import { setFindAllState } from './characters.setter';
-
-/**CHARACTERS*/
-import { Character, ListUI } from '@characters/util/model';
-import { mapDomainToCharacter, mapToCardStateMachine } from '../util/functions/mapper.';
 import { listAccent, listBorder } from '../util/functions/ui';
 import { CharactersStatistics } from '../model/statistics';
 import { calculateCharacterStatistics } from '../util/functions/statistics';
 
+/**CHARACTERS*/
+import { ListUI } from '@characters/util/model';
+import {
+  mapDomainToCharacter,
+  mapToCardStateMachine,
+} from '../util/functions/mapper.';
+import { CharacterModalService } from '@characters/ui';
+
 @Injectable({ providedIn: 'root' })
 export class CharactersFacade {
-
-  // for tommorrow open modal action
   readonly actions = rxActions<{
-    findAll: void
+    findAll: void;
+    openCharacterModal: { id: string };
   }>();
   private readonly infrastructure = inject(CharactersInfrastructureService);
+  private readonly modalService = inject(CharacterModalService);
 
   private state = rxState<CharactersState>(({ set, connect }) => {
     set({
@@ -40,21 +42,24 @@ export class CharactersFacade {
     connect(
       'characters',
       this.actions.findAll$.pipe(
-        switchMap(() => this.infrastructure.findAll().pipe(
-          map((characterDomains) => {
-            const stats: CharactersStatistics = calculateCharacterStatistics(characterDomains);
-            const level: number = stats.totalLevels / stats.totalCharacters;
-            return {
-              data: mapToCardStateMachine(characterDomains),
-              ui: {
-                border: listBorder(level),
-                accent: listAccent(stats.hordeCount, stats.allianceCount),
-              },
-            }
-          })
-        ))
+        switchMap(() =>
+          this.infrastructure.findAll().pipe(
+            map((characterDomains) => {
+              const stats: CharactersStatistics =
+                calculateCharacterStatistics(characterDomains);
+              const level: number = stats.totalLevels / stats.totalCharacters;
+              return {
+                data: mapToCardStateMachine(characterDomains),
+                ui: {
+                  border: listBorder(level),
+                  accent: listAccent(stats.hordeCount, stats.allianceCount),
+                },
+              };
+            })
+          )
+        )
       )
-    )
+    );
   });
 
   public readonly listUI$: Observable<ListUI> = this.state.select(
@@ -66,24 +71,16 @@ export class CharactersFacade {
     'data'
   );
 
-  public findAll(): void {
-    this.actions.findAll();
-  }
-
-  // thats fine
-  public findById(id: string): Observable<Character> {
-    return this.infrastructure.findById(id).pipe(map(mapDomainToCharacter))
-  }
-
-  private findAllEffect = this.actions.onFindAll(
-    (void$) =>
-      void$.pipe(
-        switchMap(() => this.infrastructure
-          .findAll()
-          .pipe(
-            tap((domain:CharacterDomain[]) => setFindAllState(this.state, domain))
-          )
-      )),
-    (v) => console.log('side effect triggered', v)
+  private openCharacterModalEffect = this.actions.onOpenCharacterModal((id$) =>
+    id$.pipe(
+      switchMap(({ id }) => {
+        return this.infrastructure.findById(id).pipe(
+          map(mapDomainToCharacter),
+          tap((s) => {
+            this.modalService.openCharacterModal(s);
+          })
+        );
+      })
+    )
   );
 }
