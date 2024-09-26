@@ -68,7 +68,7 @@ export class TemplateModalComponent implements OnInit {
   private submitListener(): void {
     this.footer?.submitButtonClick
       .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe(() => this.dialogRef.close(this.form.get()));
+      .subscribe(() => this.dialogRef.close(this.form?.get()));
   }
 
   private actionListener(): void {
