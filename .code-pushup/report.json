@@ -1,0 +1,2112 @@
+{
+  "commit": {
+    "hash": "d04add041bce3ebd7d3fe8e78f1801876b3e4e6b",
+    "message": "fix(wow): npe in form listener",
+    "date": "2024-09-26T19:52:49.000Z",
+    "author": "adrianromanski"
+  },
+  "packageName": "@code-pushup/core",
+  "version": "0.50.0",
+  "date": "2024-09-28T08:44:49.754Z",
+  "duration": 31467,
+  "categories": [
+    {
+      "slug": "bug-prevention",
+      "refs": [
+        {
+          "slug": "problems",
+          "weight": 1,
+          "type": "group",
+          "plugin": "eslint"
+        }
+      ],
+      "title": "Bug prevention",
+      "description": "Lint rules that find **potential bugs** in your code."
+    },
+    {
+      "slug": "code-style",
+      "refs": [
+        {
+          "slug": "suggestions",
+          "weight": 1,
+          "type": "group",
+          "plugin": "eslint"
+        }
+      ],
+      "title": "Code style",
+      "description": "Lint rules that promote **good practices** and consistency in your code."
+    }
+  ],
+  "plugins": [
+    {
+      "packageName": "@code-pushup/eslint-plugin",
+      "version": "0.50.0",
+      "title": "ESLint",
+      "slug": "eslint",
+      "icon": "eslint",
+      "duration": 31422,
+      "date": "2024-09-28T08:44:49.781Z",
+      "audits": [
+        {
+          "slug": "angular-eslint-directive-selector-45928d8f84697aff",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Directive selectors should follow given naming rules. See more at https://angular.dev/style-guide#style-02-06 and https://angular.dev/style-guide#style-02-08.",
+          "description": "ESLint rule **directive-selector**, from _@angular-eslint_ plugin.\n\nCustom options:\n\n```json\n{\n  \"type\": \"attribute\",\n  \"prefix\": \"app\",\n  \"style\": \"camelCase\"\n}\n```",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/directive-selector.md"
+        },
+        {
+          "slug": "angular-eslint-directive-selector-165d94bd63e890b2",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Directive selectors should follow given naming rules. See more at https://angular.dev/style-guide#style-02-06 and https://angular.dev/style-guide#style-02-08.",
+          "description": "ESLint rule **directive-selector**, from _@angular-eslint_ plugin.\n\nCustom options:\n\n```json\n{\n  \"type\": \"attribute\",\n  \"prefix\": \"characters\",\n  \"style\": \"camelCase\"\n}\n```",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/directive-selector.md"
+        },
+        {
+          "slug": "angular-eslint-directive-selector-debe9cca1bbe1f39",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Directive selectors should follow given naming rules. See more at https://angular.dev/style-guide#style-02-06 and https://angular.dev/style-guide#style-02-08.",
+          "description": "ESLint rule **directive-selector**, from _@angular-eslint_ plugin.\n\nCustom options:\n\n```json\n{\n  \"type\": \"attribute\",\n  \"prefix\": \"shared\",\n  \"style\": \"camelCase\"\n}\n```",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/directive-selector.md"
+        },
+        {
+          "slug": "angular-eslint-directive-selector-7abbaab3be0b130c",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Directive selectors should follow given naming rules. See more at https://angular.dev/style-guide#style-02-06 and https://angular.dev/style-guide#style-02-08.",
+          "description": "ESLint rule **directive-selector**, from _@angular-eslint_ plugin.\n\nCustom options:\n\n```json\n{\n  \"type\": \"attribute\",\n  \"prefix\": \"shared-util\",\n  \"style\": \"camelCase\"\n}\n```",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/directive-selector.md"
+        },
+        {
+          "slug": "angular-eslint-component-selector-0237eeaa2750140d",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Component selectors should follow given naming rules. See more at https://angular.dev/style-guide#style-02-07, https://angular.dev/style-guide#style-05-02\n      and https://angular.dev/style-guide#style-05-03.",
+          "description": "ESLint rule **component-selector**, from _@angular-eslint_ plugin.\n\nCustom options:\n\n```json\n{\n  \"type\": \"element\",\n  \"prefix\": \"app\",\n  \"style\": \"kebab-case\"\n}\n```",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/component-selector.md"
+        },
+        {
+          "slug": "angular-eslint-component-selector-8ea8fcac668e980b",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Component selectors should follow given naming rules. See more at https://angular.dev/style-guide#style-02-07, https://angular.dev/style-guide#style-05-02\n      and https://angular.dev/style-guide#style-05-03.",
+          "description": "ESLint rule **component-selector**, from _@angular-eslint_ plugin.\n\nCustom options:\n\n```json\n{\n  \"type\": \"element\",\n  \"prefix\": \"characters\",\n  \"style\": \"kebab-case\"\n}\n```",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/component-selector.md"
+        },
+        {
+          "slug": "angular-eslint-component-selector-7ed91271847092e8",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Component selectors should follow given naming rules. See more at https://angular.dev/style-guide#style-02-07, https://angular.dev/style-guide#style-05-02\n      and https://angular.dev/style-guide#style-05-03.",
+          "description": "ESLint rule **component-selector**, from _@angular-eslint_ plugin.\n\nCustom options:\n\n```json\n{\n  \"type\": \"element\",\n  \"prefix\": \"shared\",\n  \"style\": \"kebab-case\"\n}\n```",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/component-selector.md"
+        },
+        {
+          "slug": "angular-eslint-component-selector-704148528aaf1881",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Component selectors should follow given naming rules. See more at https://angular.dev/style-guide#style-02-07, https://angular.dev/style-guide#style-05-02\n      and https://angular.dev/style-guide#style-05-03.",
+          "description": "ESLint rule **component-selector**, from _@angular-eslint_ plugin.\n\nCustom options:\n\n```json\n{\n  \"type\": \"element\",\n  \"prefix\": \"shared-util\",\n  \"style\": \"kebab-case\"\n}\n```",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/component-selector.md"
+        },
+        {
+          "slug": "angular-eslint-component-class-suffix",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Classes decorated with @Component must have suffix \"Component\" (or custom) in their name. See more at https://angular.dev/style-guide#style-02-03",
+          "description": "ESLint rule **component-class-suffix**, from _@angular-eslint_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/component-class-suffix.md"
+        },
+        {
+          "slug": "angular-eslint-contextual-lifecycle",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Ensures that lifecycle methods are used in a correct context",
+          "description": "ESLint rule **contextual-lifecycle**, from _@angular-eslint_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/contextual-lifecycle.md"
+        },
+        {
+          "slug": "angular-eslint-directive-class-suffix",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Classes decorated with @Directive must have suffix \"Directive\" (or custom) in their name. See more at https://angular.dev/style-guide#style-02-03",
+          "description": "ESLint rule **directive-class-suffix**, from _@angular-eslint_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/directive-class-suffix.md"
+        },
+        {
+          "slug": "angular-eslint-no-empty-lifecycle-method",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallows declaring empty lifecycle methods",
+          "description": "ESLint rule **no-empty-lifecycle-method**, from _@angular-eslint_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/no-empty-lifecycle-method.md"
+        },
+        {
+          "slug": "angular-eslint-no-input-rename",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Ensures that input bindings are not aliased",
+          "description": "ESLint rule **no-input-rename**, from _@angular-eslint_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/no-input-rename.md"
+        },
+        {
+          "slug": "angular-eslint-no-inputs-metadata-property",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallows usage of the `inputs` metadata property. See more at https://angular.dev/style-guide#style-05-12",
+          "description": "ESLint rule **no-inputs-metadata-property**, from _@angular-eslint_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/no-inputs-metadata-property.md"
+        },
+        {
+          "slug": "angular-eslint-no-output-native",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Ensures that output bindings, including aliases, are not named as standard DOM events",
+          "description": "ESLint rule **no-output-native**, from _@angular-eslint_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/no-output-native.md"
+        },
+        {
+          "slug": "angular-eslint-no-output-on-prefix",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Ensures that output bindings, including aliases, are not named \"on\", nor prefixed with it. See more at https://angular.dev/style-guide#style-05-16",
+          "description": "ESLint rule **no-output-on-prefix**, from _@angular-eslint_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/no-output-on-prefix.md"
+        },
+        {
+          "slug": "angular-eslint-no-output-rename",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Ensures that output bindings are not aliased",
+          "description": "ESLint rule **no-output-rename**, from _@angular-eslint_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/no-output-rename.md"
+        },
+        {
+          "slug": "angular-eslint-no-outputs-metadata-property",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallows usage of the `outputs` metadata property. See more at https://angular.dev/style-guide#style-05-12",
+          "description": "ESLint rule **no-outputs-metadata-property**, from _@angular-eslint_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/no-outputs-metadata-property.md"
+        },
+        {
+          "slug": "angular-eslint-use-pipe-transform-interface",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Ensures that `Pipes` implement `PipeTransform` interface",
+          "description": "ESLint rule **use-pipe-transform-interface**, from _@angular-eslint_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/use-pipe-transform-interface.md"
+        },
+        {
+          "slug": "angular-eslint-use-lifecycle-interface",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Ensures that classes implement lifecycle interfaces corresponding to the declared lifecycle methods. See more at https://angular.dev/style-guide#style-09-01",
+          "description": "ESLint rule **use-lifecycle-interface**, from _@angular-eslint_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/docs/rules/use-lifecycle-interface.md"
+        },
+        {
+          "slug": "typescript-eslint-no-non-null-assertion",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow non-null assertions using the `!` postfix operator",
+          "description": "ESLint rule **no-non-null-assertion**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-non-null-assertion"
+        },
+        {
+          "slug": "typescript-eslint-adjacent-overload-signatures",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Require that function overload signatures be consecutive",
+          "description": "ESLint rule **adjacent-overload-signatures**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/adjacent-overload-signatures"
+        },
+        {
+          "slug": "typescript-eslint-prefer-namespace-keyword",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Require using `namespace` keyword over `module` keyword to declare custom TypeScript modules",
+          "description": "ESLint rule **prefer-namespace-keyword**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/prefer-namespace-keyword"
+        },
+        {
+          "slug": "typescript-eslint-no-empty-function",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow empty functions",
+          "description": "ESLint rule **no-empty-function**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-empty-function"
+        },
+        {
+          "slug": "typescript-eslint-no-inferrable-types",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean",
+          "description": "ESLint rule **no-inferrable-types**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-inferrable-types"
+        },
+        {
+          "slug": "typescript-eslint-no-unused-vars",
+          "displayValue": "13 warnings",
+          "value": 13,
+          "score": 0,
+          "details": {
+            "issues": [
+              {
+                "message": "'URL' is assigned a value but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/characters/src/lib/data-access/src/lib/infrastructure/characters-infrastructure.service.ts",
+                  "position": {
+                    "startLine": 12,
+                    "startColumn": 7,
+                    "endLine": 12,
+                    "endColumn": 10
+                  }
+                }
+              },
+              {
+                "message": "'CharactersFacade' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
+                  "position": {
+                    "startLine": 28,
+                    "startColumn": 10,
+                    "endLine": 28,
+                    "endColumn": 26
+                  }
+                }
+              },
+              {
+                "message": "'URL' is assigned a value but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/characters/src/lib/data-access/src/lib/infrastructure/characters-infrastructure.service.ts",
+                  "position": {
+                    "startLine": 12,
+                    "startColumn": 7,
+                    "endLine": 12,
+                    "endColumn": 10
+                  }
+                }
+              },
+              {
+                "message": "'CharactersFacade' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
+                  "position": {
+                    "startLine": 28,
+                    "startColumn": 10,
+                    "endLine": 28,
+                    "endColumn": 26
+                  }
+                }
+              },
+              {
+                "message": "'ContentChild' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
+                  "position": {
+                    "startLine": 5,
+                    "startColumn": 3,
+                    "endLine": 5,
+                    "endColumn": 15
+                  }
+                }
+              },
+              {
+                "message": "'ContentChildren' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
+                  "position": {
+                    "startLine": 6,
+                    "startColumn": 3,
+                    "endLine": 6,
+                    "endColumn": 18
+                  }
+                }
+              },
+              {
+                "message": "'OnInit' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
+                  "position": {
+                    "startLine": 10,
+                    "startColumn": 3,
+                    "endLine": 10,
+                    "endColumn": 9
+                  }
+                }
+              },
+              {
+                "message": "'QueryList' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
+                  "position": {
+                    "startLine": 12,
+                    "startColumn": 3,
+                    "endLine": 12,
+                    "endColumn": 12
+                  }
+                }
+              },
+              {
+                "message": "'viewChild' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
+                  "position": {
+                    "startLine": 12,
+                    "startColumn": 14,
+                    "endLine": 12,
+                    "endColumn": 23
+                  }
+                }
+              },
+              {
+                "message": "'viewChildren' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
+                  "position": {
+                    "startLine": 12,
+                    "startColumn": 25,
+                    "endLine": 12,
+                    "endColumn": 37
+                  }
+                }
+              },
+              {
+                "message": "'takeUntilDestroyed' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
+                  "position": {
+                    "startLine": 14,
+                    "startColumn": 10,
+                    "endLine": 14,
+                    "endColumn": 28
+                  }
+                }
+              },
+              {
+                "message": "'mergeAll' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
+                  "position": {
+                    "startLine": 17,
+                    "startColumn": 24,
+                    "endLine": 17,
+                    "endColumn": 32
+                  }
+                }
+              },
+              {
+                "message": "'Observable' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
+                  "position": {
+                    "startLine": 17,
+                    "startColumn": 34,
+                    "endLine": 17,
+                    "endColumn": 44
+                  }
+                }
+              }
+            ]
+          },
+          "title": "Disallow unused variables",
+          "description": "ESLint rule **no-unused-vars**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-unused-vars"
+        },
+        {
+          "slug": "typescript-eslint-no-empty-interface",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow the declaration of empty interfaces",
+          "description": "ESLint rule **no-empty-interface**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-empty-interface"
+        },
+        {
+          "slug": "typescript-eslint-no-explicit-any",
+          "displayValue": "1 warning",
+          "value": 1,
+          "score": 0,
+          "details": {
+            "issues": [
+              {
+                "message": "Unexpected any. Specify a different type.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
+                  "position": {
+                    "startLine": 64,
+                    "startColumn": 59,
+                    "endLine": 64,
+                    "endColumn": 62
+                  }
+                }
+              }
+            ]
+          },
+          "title": "Disallow the `any` type",
+          "description": "ESLint rule **no-explicit-any**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-explicit-any"
+        },
+        {
+          "slug": "typescript-eslint-ban-types",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow certain types",
+          "description": "ESLint rule **ban-types**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/ban-types"
+        },
+        {
+          "slug": "typescript-eslint-no-array-constructor",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow generic `Array` constructors",
+          "description": "ESLint rule **no-array-constructor**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-array-constructor"
+        },
+        {
+          "slug": "typescript-eslint-no-duplicate-enum-values",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow duplicate enum member values",
+          "description": "ESLint rule **no-duplicate-enum-values**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-duplicate-enum-values"
+        },
+        {
+          "slug": "typescript-eslint-no-extra-non-null-assertion",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow extra non-null assertions",
+          "description": "ESLint rule **no-extra-non-null-assertion**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-extra-non-null-assertion"
+        },
+        {
+          "slug": "typescript-eslint-no-loss-of-precision",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow literal numbers that lose precision",
+          "description": "ESLint rule **no-loss-of-precision**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-loss-of-precision"
+        },
+        {
+          "slug": "typescript-eslint-no-misused-new",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Enforce valid definition of `new` and `constructor`",
+          "description": "ESLint rule **no-misused-new**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-misused-new"
+        },
+        {
+          "slug": "typescript-eslint-no-namespace",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow TypeScript namespaces",
+          "description": "ESLint rule **no-namespace**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-namespace"
+        },
+        {
+          "slug": "typescript-eslint-no-non-null-asserted-optional-chain",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow non-null assertions after an optional chain expression",
+          "description": "ESLint rule **no-non-null-asserted-optional-chain**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-non-null-asserted-optional-chain"
+        },
+        {
+          "slug": "typescript-eslint-no-this-alias",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow aliasing `this`",
+          "description": "ESLint rule **no-this-alias**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-this-alias"
+        },
+        {
+          "slug": "typescript-eslint-no-unnecessary-type-constraint",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow unnecessary constraints on generic types",
+          "description": "ESLint rule **no-unnecessary-type-constraint**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-unnecessary-type-constraint"
+        },
+        {
+          "slug": "typescript-eslint-no-unsafe-declaration-merging",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow unsafe declaration merging",
+          "description": "ESLint rule **no-unsafe-declaration-merging**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-unsafe-declaration-merging"
+        },
+        {
+          "slug": "typescript-eslint-no-var-requires",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow `require` statements except in import statements",
+          "description": "ESLint rule **no-var-requires**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/no-var-requires"
+        },
+        {
+          "slug": "typescript-eslint-prefer-as-const",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Enforce the use of `as const` over literal type",
+          "description": "ESLint rule **prefer-as-const**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/prefer-as-const"
+        },
+        {
+          "slug": "typescript-eslint-triple-slash-reference",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow certain triple slash directives in favor of ES6-style import declarations",
+          "description": "ESLint rule **triple-slash-reference**, from _@typescript-eslint_ plugin.",
+          "docsUrl": "https://typescript-eslint.io/rules/triple-slash-reference"
+        },
+        {
+          "slug": "no-var",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Require `let` or `const` instead of `var`",
+          "description": "ESLint rule **no-var**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-var"
+        },
+        {
+          "slug": "prefer-const",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Require `const` declarations for variables that are never reassigned after declared",
+          "description": "ESLint rule **prefer-const**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/prefer-const"
+        },
+        {
+          "slug": "prefer-rest-params",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Require rest parameters instead of `arguments`",
+          "description": "ESLint rule **prefer-rest-params**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/prefer-rest-params"
+        },
+        {
+          "slug": "prefer-spread",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Require spread operators instead of `.apply()`",
+          "description": "ESLint rule **prefer-spread**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/prefer-spread"
+        },
+        {
+          "slug": "for-direction",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Enforce \"for\" loop update clause moving the counter in the right direction",
+          "description": "ESLint rule **for-direction**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/for-direction"
+        },
+        {
+          "slug": "no-async-promise-executor",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow using an async function as a Promise executor",
+          "description": "ESLint rule **no-async-promise-executor**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-async-promise-executor"
+        },
+        {
+          "slug": "no-case-declarations",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow lexical declarations in case clauses",
+          "description": "ESLint rule **no-case-declarations**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-case-declarations"
+        },
+        {
+          "slug": "no-class-assign",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow reassigning class members",
+          "description": "ESLint rule **no-class-assign**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-class-assign"
+        },
+        {
+          "slug": "no-compare-neg-zero",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow comparing against -0",
+          "description": "ESLint rule **no-compare-neg-zero**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-compare-neg-zero"
+        },
+        {
+          "slug": "no-cond-assign",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow assignment operators in conditional expressions",
+          "description": "ESLint rule **no-cond-assign**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-cond-assign"
+        },
+        {
+          "slug": "no-constant-condition",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow constant expressions in conditions",
+          "description": "ESLint rule **no-constant-condition**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-constant-condition"
+        },
+        {
+          "slug": "no-control-regex",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow control characters in regular expressions",
+          "description": "ESLint rule **no-control-regex**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-control-regex"
+        },
+        {
+          "slug": "no-debugger",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow the use of `debugger`",
+          "description": "ESLint rule **no-debugger**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-debugger"
+        },
+        {
+          "slug": "no-delete-var",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow deleting variables",
+          "description": "ESLint rule **no-delete-var**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-delete-var"
+        },
+        {
+          "slug": "no-dupe-else-if",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow duplicate conditions in if-else-if chains",
+          "description": "ESLint rule **no-dupe-else-if**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-dupe-else-if"
+        },
+        {
+          "slug": "no-duplicate-case",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow duplicate case labels",
+          "description": "ESLint rule **no-duplicate-case**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-duplicate-case"
+        },
+        {
+          "slug": "no-empty",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow empty block statements",
+          "description": "ESLint rule **no-empty**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-empty"
+        },
+        {
+          "slug": "no-empty-character-class",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow empty character classes in regular expressions",
+          "description": "ESLint rule **no-empty-character-class**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-empty-character-class"
+        },
+        {
+          "slug": "no-empty-pattern",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow empty destructuring patterns",
+          "description": "ESLint rule **no-empty-pattern**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-empty-pattern"
+        },
+        {
+          "slug": "no-ex-assign",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow reassigning exceptions in `catch` clauses",
+          "description": "ESLint rule **no-ex-assign**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-ex-assign"
+        },
+        {
+          "slug": "no-extra-boolean-cast",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow unnecessary boolean casts",
+          "description": "ESLint rule **no-extra-boolean-cast**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-extra-boolean-cast"
+        },
+        {
+          "slug": "no-fallthrough",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow fallthrough of `case` statements",
+          "description": "ESLint rule **no-fallthrough**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-fallthrough"
+        },
+        {
+          "slug": "no-global-assign",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow assignments to native objects or read-only global variables",
+          "description": "ESLint rule **no-global-assign**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-global-assign"
+        },
+        {
+          "slug": "no-inner-declarations",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow variable or `function` declarations in nested blocks",
+          "description": "ESLint rule **no-inner-declarations**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-inner-declarations"
+        },
+        {
+          "slug": "no-invalid-regexp",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow invalid regular expression strings in `RegExp` constructors",
+          "description": "ESLint rule **no-invalid-regexp**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-invalid-regexp"
+        },
+        {
+          "slug": "no-irregular-whitespace",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow irregular whitespace",
+          "description": "ESLint rule **no-irregular-whitespace**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-irregular-whitespace"
+        },
+        {
+          "slug": "no-misleading-character-class",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow characters which are made with multiple code points in character class syntax",
+          "description": "ESLint rule **no-misleading-character-class**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-misleading-character-class"
+        },
+        {
+          "slug": "no-nonoctal-decimal-escape",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow `\\8` and `\\9` escape sequences in string literals",
+          "description": "ESLint rule **no-nonoctal-decimal-escape**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-nonoctal-decimal-escape"
+        },
+        {
+          "slug": "no-octal",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow octal literals",
+          "description": "ESLint rule **no-octal**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-octal"
+        },
+        {
+          "slug": "no-prototype-builtins",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow calling some `Object.prototype` methods directly on objects",
+          "description": "ESLint rule **no-prototype-builtins**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-prototype-builtins"
+        },
+        {
+          "slug": "no-regex-spaces",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow multiple spaces in regular expressions",
+          "description": "ESLint rule **no-regex-spaces**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-regex-spaces"
+        },
+        {
+          "slug": "no-self-assign",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow assignments where both sides are exactly the same",
+          "description": "ESLint rule **no-self-assign**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-self-assign"
+        },
+        {
+          "slug": "no-shadow-restricted-names",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow identifiers from shadowing restricted names",
+          "description": "ESLint rule **no-shadow-restricted-names**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-shadow-restricted-names"
+        },
+        {
+          "slug": "no-sparse-arrays",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow sparse arrays",
+          "description": "ESLint rule **no-sparse-arrays**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-sparse-arrays"
+        },
+        {
+          "slug": "no-unsafe-finally",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow control flow statements in `finally` blocks",
+          "description": "ESLint rule **no-unsafe-finally**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-unsafe-finally"
+        },
+        {
+          "slug": "no-unsafe-optional-chaining",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow use of optional chaining in contexts where the `undefined` value is not allowed",
+          "description": "ESLint rule **no-unsafe-optional-chaining**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-unsafe-optional-chaining"
+        },
+        {
+          "slug": "no-unused-labels",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow unused labels",
+          "description": "ESLint rule **no-unused-labels**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-unused-labels"
+        },
+        {
+          "slug": "no-useless-backreference",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow useless backreferences in regular expressions",
+          "description": "ESLint rule **no-useless-backreference**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-useless-backreference"
+        },
+        {
+          "slug": "no-useless-catch",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow unnecessary `catch` clauses",
+          "description": "ESLint rule **no-useless-catch**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-useless-catch"
+        },
+        {
+          "slug": "no-useless-escape",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow unnecessary escape characters",
+          "description": "ESLint rule **no-useless-escape**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-useless-escape"
+        },
+        {
+          "slug": "no-with",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow `with` statements",
+          "description": "ESLint rule **no-with**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/no-with"
+        },
+        {
+          "slug": "require-yield",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Require generator functions to contain `yield`",
+          "description": "ESLint rule **require-yield**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/require-yield"
+        },
+        {
+          "slug": "use-isnan",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Require calls to `isNaN()` when checking for `NaN`",
+          "description": "ESLint rule **use-isnan**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/use-isnan"
+        },
+        {
+          "slug": "valid-typeof",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Enforce comparing `typeof` expressions against valid strings",
+          "description": "ESLint rule **valid-typeof**.",
+          "docsUrl": "https://eslint.org/docs/latest/rules/valid-typeof"
+        },
+        {
+          "slug": "nx-enforce-module-boundaries-a5cf8e506d20217b",
+          "displayValue": "4 errors",
+          "value": 4,
+          "score": 0,
+          "details": {
+            "issues": [
+              {
+                "message": "Circular dependency between \"characters-domain\" and \"characters-ui\" detected: characters-domain -> characters-ui -> characters-domain\n\nCircular file chain:\n- libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts\n- libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
+                "severity": "error",
+                "source": {
+                  "file": "libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
+                  "position": {
+                    "startLine": 24,
+                    "startColumn": 1,
+                    "endLine": 24,
+                    "endColumn": 56
+                  }
+                }
+              },
+              {
+                "message": "Circular dependency between \"characters-ui\" and \"characters-domain\" detected: characters-ui -> characters-domain -> characters-ui\n\nCircular file chain:\n- libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts\n- libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
+                "severity": "error",
+                "source": {
+                  "file": "libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
+                  "position": {
+                    "startLine": 28,
+                    "startColumn": 1,
+                    "endLine": 28,
+                    "endColumn": 60
+                  }
+                }
+              },
+              {
+                "message": "Circular dependency between \"characters-domain\" and \"characters-ui\" detected: characters-domain -> characters-ui -> characters-domain\n\nCircular file chain:\n- libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts\n- libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
+                "severity": "error",
+                "source": {
+                  "file": "libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
+                  "position": {
+                    "startLine": 24,
+                    "startColumn": 1,
+                    "endLine": 24,
+                    "endColumn": 56
+                  }
+                }
+              },
+              {
+                "message": "Circular dependency between \"characters-ui\" and \"characters-domain\" detected: characters-ui -> characters-domain -> characters-ui\n\nCircular file chain:\n- libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts\n- libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
+                "severity": "error",
+                "source": {
+                  "file": "libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
+                  "position": {
+                    "startLine": 28,
+                    "startColumn": 1,
+                    "endLine": 28,
+                    "endColumn": 60
+                  }
+                }
+              }
+            ]
+          },
+          "title": "Ensure that module boundaries are respected within the monorepo",
+          "description": "ESLint rule **enforce-module-boundaries**, from _@nx_ plugin.\n\nCustom options:\n\n```json\n{\n  \"enforceBuildableLibDependency\": true,\n  \"allow\": [],\n  \"depConstraints\": [\n    {\n      \"sourceTag\": \"type:app\",\n      \"onlyDependOnLibsWithTags\": [\n        \"type:shell\",\n        \"type:feature\",\n        \"type:ui\",\n        \"type:data-access\",\n        \"type:util\"\n      ]\n    },\n    {\n      \"sourceTag\": \"type:shell\",\n      \"onlyDependOnLibsWithTags\": [\n        \"type:feature\",\n        \"type:ui\",\n        \"type:data-access\",\n        \"type:util\"\n      ]\n    },\n    {\n      \"sourceTag\": \"type:feature\",\n      \"onlyDependOnLibsWithTags\": [\n        \"type:feature\",\n        \"type:ui\",\n        \"type:data-access\",\n        \"type:util\"\n      ]\n    },\n    {\n      \"sourceTag\": \"type:ui\",\n      \"onlyDependOnLibsWithTags\": [\n        \"type:data-access\",\n        \"type:ui\",\n        \"type:util\"\n      ]\n    },\n    {\n      \"sourceTag\": \"type:data-access\",\n      \"onlyDependOnLibsWithTags\": [\n        \"type:data-access\",\n        \"type:util\"\n      ]\n    },\n    {\n      \"sourceTag\": \"type:util\",\n      \"onlyDependOnLibsWithTags\": [\n        \"type:util\"\n      ]\n    },\n    {\n      \"sourceTag\": \"domain:app\",\n      \"onlyDependOnLibsWithTags\": [\n        \"*\"\n      ]\n    },\n    {\n      \"sourceTag\": \"domain:characters\",\n      \"onlyDependOnLibsWithTags\": [\n        \"domain:characters\",\n        \"domain:shared\"\n      ]\n    },\n    {\n      \"sourceTag\": \"domain:shared\",\n      \"onlyDependOnLibsWithTags\": [\n        \"domain:shared\"\n      ]\n    }\n  ]\n}\n```",
+          "docsUrl": "https://github.com/nrwl/nx/blob/19.6.2/docs/generated/packages/eslint-plugin/documents/enforce-module-boundaries.md"
+        },
+        {
+          "slug": "playwright-expect-expect",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Enforce assertion to be made in a test body",
+          "description": "ESLint rule **expect-expect**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/expect-expect.md"
+        },
+        {
+          "slug": "playwright-max-nested-describe",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Enforces a maximum depth to nested describe calls",
+          "description": "ESLint rule **max-nested-describe**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/max-nested-describe.md"
+        },
+        {
+          "slug": "playwright-missing-playwright-await",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Identify false positives when async Playwright APIs are not properly awaited.",
+          "description": "ESLint rule **missing-playwright-await**, from _playwright_ plugin."
+        },
+        {
+          "slug": "playwright-no-conditional-in-test",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow conditional logic in tests",
+          "description": "ESLint rule **no-conditional-in-test**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-conditional-in-test.md"
+        },
+        {
+          "slug": "playwright-no-element-handle",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "The use of ElementHandle is discouraged, use Locator instead",
+          "description": "ESLint rule **no-element-handle**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-element-handle.md"
+        },
+        {
+          "slug": "playwright-no-eval",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "The use of `page.$eval` and `page.$$eval` are discouraged, use `locator.evaluate` or `locator.evaluateAll` instead",
+          "description": "ESLint rule **no-eval**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-eval.md"
+        },
+        {
+          "slug": "playwright-no-focused-test",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Prevent usage of `.only()` focus test annotation",
+          "description": "ESLint rule **no-focused-test**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-focused-test.md"
+        },
+        {
+          "slug": "playwright-no-force-option",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Prevent usage of `{ force: true }` option.",
+          "description": "ESLint rule **no-force-option**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-force-option.md"
+        },
+        {
+          "slug": "playwright-no-nested-step",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow nested `test.step()` methods",
+          "description": "ESLint rule **no-nested-step**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-nested-step.md"
+        },
+        {
+          "slug": "playwright-no-networkidle",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Prevent usage of the networkidle option",
+          "description": "ESLint rule **no-networkidle**, from _playwright_ plugin."
+        },
+        {
+          "slug": "playwright-no-page-pause",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Prevent usage of page.pause()",
+          "description": "ESLint rule **no-page-pause**, from _playwright_ plugin."
+        },
+        {
+          "slug": "playwright-no-skipped-test",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Prevent usage of the `.skip()` skip test annotation.",
+          "description": "ESLint rule **no-skipped-test**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-skipped-test.md"
+        },
+        {
+          "slug": "playwright-no-useless-await",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow unnecessary awaits for Playwright methods",
+          "description": "ESLint rule **no-useless-await**, from _playwright_ plugin."
+        },
+        {
+          "slug": "playwright-no-useless-not",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Disallow usage of 'not' matchers when a more specific matcher exists",
+          "description": "ESLint rule **no-useless-not**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-useless-not.md"
+        },
+        {
+          "slug": "playwright-no-wait-for-timeout",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Prevent usage of page.waitForTimeout()",
+          "description": "ESLint rule **no-wait-for-timeout**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/no-wait-for-timeout.md"
+        },
+        {
+          "slug": "playwright-prefer-web-first-assertions",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Prefer web first assertions",
+          "description": "ESLint rule **prefer-web-first-assertions**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/prefer-web-first-assertions.md"
+        },
+        {
+          "slug": "playwright-valid-expect",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Enforce valid `expect()` usage",
+          "description": "ESLint rule **valid-expect**, from _playwright_ plugin.",
+          "docsUrl": "https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/valid-expect.md"
+        },
+        {
+          "slug": "angular-eslint-template-banana-in-box",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Ensures that the two-way data binding syntax is correct",
+          "description": "ESLint rule **banana-in-box**, from _@angular-eslint/template_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/banana-in-box.md"
+        },
+        {
+          "slug": "angular-eslint-template-eqeqeq",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Requires `===` and `!==` in place of `==` and `!=`",
+          "description": "ESLint rule **eqeqeq**, from _@angular-eslint/template_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/eqeqeq.md"
+        },
+        {
+          "slug": "angular-eslint-template-no-negated-async",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Ensures that async pipe results, as well as values used with the async pipe, are not negated",
+          "description": "ESLint rule **no-negated-async**, from _@angular-eslint/template_ plugin.",
+          "docsUrl": "https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/no-negated-async.md"
+        },
+        {
+          "slug": "nx-dependency-checks",
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
+          "details": {
+            "issues": []
+          },
+          "title": "Checks dependencies in project's package.json for version mismatches",
+          "description": "ESLint rule **dependency-checks**, from _@nx_ plugin.",
+          "docsUrl": "https://github.com/nrwl/nx/blob/19.6.2/docs/generated/packages/eslint-plugin/documents/dependency-checks.md"
+        }
+      ],
+      "description": "Official Code PushUp ESLint plugin",
+      "docsUrl": "https://www.npmjs.com/package/@code-pushup/eslint-plugin",
+      "groups": [
+        {
+          "slug": "problems",
+          "refs": [
+            {
+              "slug": "angular-eslint-contextual-lifecycle",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-non-null-assertion",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-unused-vars",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-duplicate-enum-values",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-extra-non-null-assertion",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-loss-of-precision",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-misused-new",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-non-null-asserted-optional-chain",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-unsafe-declaration-merging",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-var-requires",
+              "weight": 1
+            },
+            {
+              "slug": "for-direction",
+              "weight": 1
+            },
+            {
+              "slug": "no-async-promise-executor",
+              "weight": 1
+            },
+            {
+              "slug": "no-class-assign",
+              "weight": 1
+            },
+            {
+              "slug": "no-compare-neg-zero",
+              "weight": 1
+            },
+            {
+              "slug": "no-cond-assign",
+              "weight": 1
+            },
+            {
+              "slug": "no-constant-condition",
+              "weight": 1
+            },
+            {
+              "slug": "no-control-regex",
+              "weight": 1
+            },
+            {
+              "slug": "no-debugger",
+              "weight": 1
+            },
+            {
+              "slug": "no-dupe-else-if",
+              "weight": 1
+            },
+            {
+              "slug": "no-duplicate-case",
+              "weight": 1
+            },
+            {
+              "slug": "no-empty-character-class",
+              "weight": 1
+            },
+            {
+              "slug": "no-empty-pattern",
+              "weight": 1
+            },
+            {
+              "slug": "no-ex-assign",
+              "weight": 1
+            },
+            {
+              "slug": "no-fallthrough",
+              "weight": 1
+            },
+            {
+              "slug": "no-inner-declarations",
+              "weight": 1
+            },
+            {
+              "slug": "no-invalid-regexp",
+              "weight": 1
+            },
+            {
+              "slug": "no-irregular-whitespace",
+              "weight": 1
+            },
+            {
+              "slug": "no-misleading-character-class",
+              "weight": 1
+            },
+            {
+              "slug": "no-prototype-builtins",
+              "weight": 1
+            },
+            {
+              "slug": "no-self-assign",
+              "weight": 1
+            },
+            {
+              "slug": "no-sparse-arrays",
+              "weight": 1
+            },
+            {
+              "slug": "no-unsafe-finally",
+              "weight": 1
+            },
+            {
+              "slug": "no-unsafe-optional-chaining",
+              "weight": 1
+            },
+            {
+              "slug": "no-useless-backreference",
+              "weight": 1
+            },
+            {
+              "slug": "use-isnan",
+              "weight": 1
+            },
+            {
+              "slug": "valid-typeof",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-expect-expect",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-missing-playwright-await",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-conditional-in-test",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-eval",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-focused-test",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-nested-step",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-networkidle",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-page-pause",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-useless-await",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-useless-not",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-valid-expect",
+              "weight": 1
+            }
+          ],
+          "title": "Problems",
+          "description": "Code that either will cause an error or may cause confusing behavior. Developers should consider this a high priority to resolve."
+        },
+        {
+          "slug": "suggestions",
+          "refs": [
+            {
+              "slug": "angular-eslint-directive-selector-45928d8f84697aff",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-directive-selector-165d94bd63e890b2",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-directive-selector-debe9cca1bbe1f39",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-directive-selector-7abbaab3be0b130c",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-component-selector-0237eeaa2750140d",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-component-selector-8ea8fcac668e980b",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-component-selector-7ed91271847092e8",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-component-selector-704148528aaf1881",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-component-class-suffix",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-directive-class-suffix",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-no-empty-lifecycle-method",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-no-input-rename",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-no-inputs-metadata-property",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-no-output-native",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-no-output-on-prefix",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-no-output-rename",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-no-outputs-metadata-property",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-use-pipe-transform-interface",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-use-lifecycle-interface",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-adjacent-overload-signatures",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-prefer-namespace-keyword",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-empty-function",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-inferrable-types",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-empty-interface",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-explicit-any",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-ban-types",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-array-constructor",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-namespace",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-this-alias",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-no-unnecessary-type-constraint",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-prefer-as-const",
+              "weight": 1
+            },
+            {
+              "slug": "typescript-eslint-triple-slash-reference",
+              "weight": 1
+            },
+            {
+              "slug": "no-var",
+              "weight": 1
+            },
+            {
+              "slug": "prefer-const",
+              "weight": 1
+            },
+            {
+              "slug": "prefer-rest-params",
+              "weight": 1
+            },
+            {
+              "slug": "prefer-spread",
+              "weight": 1
+            },
+            {
+              "slug": "no-case-declarations",
+              "weight": 1
+            },
+            {
+              "slug": "no-delete-var",
+              "weight": 1
+            },
+            {
+              "slug": "no-empty",
+              "weight": 1
+            },
+            {
+              "slug": "no-extra-boolean-cast",
+              "weight": 1
+            },
+            {
+              "slug": "no-global-assign",
+              "weight": 1
+            },
+            {
+              "slug": "no-nonoctal-decimal-escape",
+              "weight": 1
+            },
+            {
+              "slug": "no-octal",
+              "weight": 1
+            },
+            {
+              "slug": "no-regex-spaces",
+              "weight": 1
+            },
+            {
+              "slug": "no-shadow-restricted-names",
+              "weight": 1
+            },
+            {
+              "slug": "no-unused-labels",
+              "weight": 1
+            },
+            {
+              "slug": "no-useless-catch",
+              "weight": 1
+            },
+            {
+              "slug": "no-useless-escape",
+              "weight": 1
+            },
+            {
+              "slug": "no-with",
+              "weight": 1
+            },
+            {
+              "slug": "require-yield",
+              "weight": 1
+            },
+            {
+              "slug": "nx-enforce-module-boundaries-a5cf8e506d20217b",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-max-nested-describe",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-element-handle",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-force-option",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-skipped-test",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-wait-for-timeout",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-prefer-web-first-assertions",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-template-banana-in-box",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-template-eqeqeq",
+              "weight": 1
+            },
+            {
+              "slug": "angular-eslint-template-no-negated-async",
+              "weight": 1
+            },
+            {
+              "slug": "nx-dependency-checks",
+              "weight": 1
+            }
+          ],
+          "title": "Suggestions",
+          "description": "Something that could be done in a better way but no errors will occur if the code isn't changed."
+        },
+        {
+          "slug": "playwright-best-practices",
+          "refs": [
+            {
+              "slug": "playwright-expect-expect",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-max-nested-describe",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-conditional-in-test",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-force-option",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-nested-step",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-skipped-test",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-useless-not",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-wait-for-timeout",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-prefer-web-first-assertions",
+              "weight": 1
+            }
+          ],
+          "title": "Best Practices (playwright)"
+        },
+        {
+          "slug": "playwright-possible-errors",
+          "refs": [
+            {
+              "slug": "playwright-missing-playwright-await",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-element-handle",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-eval",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-focused-test",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-networkidle",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-page-pause",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-no-useless-await",
+              "weight": 1
+            },
+            {
+              "slug": "playwright-valid-expect",
+              "weight": 1
+            }
+          ],
+          "title": "Possible Errors (playwright)"
+        }
+      ]
+    }
+  ]
+}
