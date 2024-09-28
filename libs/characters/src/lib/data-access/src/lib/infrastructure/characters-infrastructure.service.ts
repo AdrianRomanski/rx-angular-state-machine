@@ -1,6 +1,5 @@
 /**ANGULAR*/
-import { inject, Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 /**DEPENDENCIES*/
 import { Observable, of } from 'rxjs';
@@ -9,12 +8,8 @@ import { Observable, of } from 'rxjs';
 import { CharacterDomain } from '../entity/character.entity';
 import { MOCK_CHARACTERS } from './db.const';
 
-const URL = '/api/characters/';
-
 @Injectable({ providedIn: 'root' })
 export class CharactersInfrastructureService {
-  private readonly http: HttpClient = inject(HttpClient)
-
   findAll(): Observable<CharacterDomain[]> {
     return of(MOCK_CHARACTERS);
   }

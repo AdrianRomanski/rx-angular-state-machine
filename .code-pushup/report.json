@@ -1,14 +1,14 @@
 {
   "commit": {
-    "hash": "d04add041bce3ebd7d3fe8e78f1801876b3e4e6b",
-    "message": "fix(wow): npe in form listener",
-    "date": "2024-09-26T19:52:49.000Z",
+    "hash": "8e05605534754e8a5d2359c02d1c2da5c2fbefb9",
+    "message": "ci(workspace): add code push-up",
+    "date": "2024-09-28T12:44:07.000Z",
     "author": "adrianromanski"
   },
   "packageName": "@code-pushup/core",
   "version": "0.50.0",
-  "date": "2024-09-28T08:44:49.754Z",
-  "duration": 31467,
+  "date": "2024-09-28T13:00:52.095Z",
+  "duration": 29577,
   "categories": [
     {
       "slug": "bug-prevention",
@@ -44,8 +44,8 @@
       "title": "ESLint",
       "slug": "eslint",
       "icon": "eslint",
-      "duration": 31422,
-      "date": "2024-09-28T08:44:49.781Z",
+      "duration": 29535,
+      "date": "2024-09-28T13:00:52.121Z",
       "audits": [
         {
           "slug": "angular-eslint-directive-selector-45928d8f84697aff",
@@ -349,181 +349,11 @@
         },
         {
           "slug": "typescript-eslint-no-unused-vars",
-          "displayValue": "13 warnings",
-          "value": 13,
-          "score": 0,
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
           "details": {
-            "issues": [
-              {
-                "message": "'URL' is assigned a value but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/characters/src/lib/data-access/src/lib/infrastructure/characters-infrastructure.service.ts",
-                  "position": {
-                    "startLine": 12,
-                    "startColumn": 7,
-                    "endLine": 12,
-                    "endColumn": 10
-                  }
-                }
-              },
-              {
-                "message": "'CharactersFacade' is defined but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
-                  "position": {
-                    "startLine": 28,
-                    "startColumn": 10,
-                    "endLine": 28,
-                    "endColumn": 26
-                  }
-                }
-              },
-              {
-                "message": "'URL' is assigned a value but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/characters/src/lib/data-access/src/lib/infrastructure/characters-infrastructure.service.ts",
-                  "position": {
-                    "startLine": 12,
-                    "startColumn": 7,
-                    "endLine": 12,
-                    "endColumn": 10
-                  }
-                }
-              },
-              {
-                "message": "'CharactersFacade' is defined but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
-                  "position": {
-                    "startLine": 28,
-                    "startColumn": 10,
-                    "endLine": 28,
-                    "endColumn": 26
-                  }
-                }
-              },
-              {
-                "message": "'ContentChild' is defined but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
-                  "position": {
-                    "startLine": 5,
-                    "startColumn": 3,
-                    "endLine": 5,
-                    "endColumn": 15
-                  }
-                }
-              },
-              {
-                "message": "'ContentChildren' is defined but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
-                  "position": {
-                    "startLine": 6,
-                    "startColumn": 3,
-                    "endLine": 6,
-                    "endColumn": 18
-                  }
-                }
-              },
-              {
-                "message": "'OnInit' is defined but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
-                  "position": {
-                    "startLine": 10,
-                    "startColumn": 3,
-                    "endLine": 10,
-                    "endColumn": 9
-                  }
-                }
-              },
-              {
-                "message": "'QueryList' is defined but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
-                  "position": {
-                    "startLine": 12,
-                    "startColumn": 3,
-                    "endLine": 12,
-                    "endColumn": 12
-                  }
-                }
-              },
-              {
-                "message": "'viewChild' is defined but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
-                  "position": {
-                    "startLine": 12,
-                    "startColumn": 14,
-                    "endLine": 12,
-                    "endColumn": 23
-                  }
-                }
-              },
-              {
-                "message": "'viewChildren' is defined but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
-                  "position": {
-                    "startLine": 12,
-                    "startColumn": 25,
-                    "endLine": 12,
-                    "endColumn": 37
-                  }
-                }
-              },
-              {
-                "message": "'takeUntilDestroyed' is defined but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
-                  "position": {
-                    "startLine": 14,
-                    "startColumn": 10,
-                    "endLine": 14,
-                    "endColumn": 28
-                  }
-                }
-              },
-              {
-                "message": "'mergeAll' is defined but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
-                  "position": {
-                    "startLine": 17,
-                    "startColumn": 24,
-                    "endLine": 17,
-                    "endColumn": 32
-                  }
-                }
-              },
-              {
-                "message": "'Observable' is defined but never used.",
-                "severity": "warning",
-                "source": {
-                  "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
-                  "position": {
-                    "startLine": 17,
-                    "startColumn": 34,
-                    "endLine": 17,
-                    "endColumn": 44
-                  }
-                }
-              }
-            ]
+            "issues": []
           },
           "title": "Disallow unused variables",
           "description": "ESLint rule **no-unused-vars**, from _@typescript-eslint_ plugin.",
@@ -554,9 +384,9 @@
                 "source": {
                   "file": "libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts",
                   "position": {
-                    "startLine": 64,
+                    "startLine": 59,
                     "startColumn": 59,
-                    "endLine": 64,
+                    "endLine": 59,
                     "endColumn": 62
                   }
                 }
@@ -1265,13 +1095,13 @@
         },
         {
           "slug": "nx-enforce-module-boundaries-a5cf8e506d20217b",
-          "displayValue": "4 errors",
-          "value": 4,
+          "displayValue": "2 errors",
+          "value": 2,
           "score": 0,
           "details": {
             "issues": [
               {
-                "message": "Circular dependency between \"characters-domain\" and \"characters-ui\" detected: characters-domain -> characters-ui -> characters-domain\n\nCircular file chain:\n- libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts\n- libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
+                "message": "A project tagged with \"type:data-access\" can only depend on libs tagged with \"type:data-access\", \"type:util\"",
                 "severity": "error",
                 "source": {
                   "file": "libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
@@ -1284,20 +1114,7 @@
                 }
               },
               {
-                "message": "Circular dependency between \"characters-ui\" and \"characters-domain\" detected: characters-ui -> characters-domain -> characters-ui\n\nCircular file chain:\n- libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts\n- libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
-                "severity": "error",
-                "source": {
-                  "file": "libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
-                  "position": {
-                    "startLine": 28,
-                    "startColumn": 1,
-                    "endLine": 28,
-                    "endColumn": 60
-                  }
-                }
-              },
-              {
-                "message": "Circular dependency between \"characters-domain\" and \"characters-ui\" detected: characters-domain -> characters-ui -> characters-domain\n\nCircular file chain:\n- libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts\n- libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
+                "message": "A project tagged with \"type:data-access\" can only depend on libs tagged with \"type:data-access\", \"type:util\"",
                 "severity": "error",
                 "source": {
                   "file": "libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
@@ -1306,19 +1123,6 @@
                     "startColumn": 1,
                     "endLine": 24,
                     "endColumn": 56
-                  }
-                }
-              },
-              {
-                "message": "Circular dependency between \"characters-ui\" and \"characters-domain\" detected: characters-ui -> characters-domain -> characters-ui\n\nCircular file chain:\n- libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts\n- libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
-                "severity": "error",
-                "source": {
-                  "file": "libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
-                  "position": {
-                    "startLine": 28,
-                    "startColumn": 1,
-                    "endLine": 28,
-                    "endColumn": 60
                   }
                 }
               }

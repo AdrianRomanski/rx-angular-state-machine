@@ -1,20 +1,17 @@
 /**ANGULAR*/
 import {
   ChangeDetectionStrategy,
-  Component, contentChild,
-  ContentChild, contentChildren,
-  ContentChildren,
-  DestroyRef,
+  Component,
+  contentChild,
+  contentChildren,
   EventEmitter,
-  inject,
-  OnInit,
-  Output,
-  QueryList, viewChild, viewChildren
+  Output
 } from '@angular/core';
-import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
+import { toObservable } from '@angular/core/rxjs-interop';
 
 /**DEPENDENCIES*/
-import { EMPTY, merge, mergeAll, Observable, switchMap, tap } from 'rxjs';
+import { EMPTY, merge, switchMap, tap } from 'rxjs';
+import { rxEffects } from '@rx-angular/state/effects';
 
 /**INTERNALS*/
 import { TemplateModalFooterBridge } from './template-modal-footer-bridge.interface';
@@ -27,7 +24,6 @@ import {
   SubmitButtonDirective,
 } from '@shared/util/directives';
 import { ActionStateMachine } from '@shared/util/model';
-import { rxEffects } from '@rx-angular/state/effects';
 
 @Component({
   selector: 'shared-ui-template-modal-footer',
@@ -44,10 +40,9 @@ import { rxEffects } from '@rx-angular/state/effects';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TemplateModalFooterComponent implements TemplateModalFooterBridge {
-  private readonly destroyRef = inject(DestroyRef);
-
   submitButtonDirective = contentChild(SubmitButtonDirective);
   submitButtonDirective$ = toObservable(this.submitButtonDirective);
+
   closeButtonDirective = contentChild(CloseButtonDirective);
   closeButtonDirective$ = toObservable(this.closeButtonDirective);
 

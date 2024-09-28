@@ -1,9 +1,9 @@
 # Code PushUp Report
 
-| 🏷 Category                       |  ⭐ Score  | 🛡 Audits |
-| :-------------------------------- | :-------: | :-------: |
-| [Bug prevention](#bug-prevention) | 🟢 **98** |    47     |
-| [Code style](#code-style)         | 🟢 **97** |    61     |
+| 🏷 Category                       |  ⭐ Score   | 🛡 Audits |
+| :-------------------------------- | :--------: | :-------: |
+| [Bug prevention](#bug-prevention) | 🟢 **100** |    47     |
+| [Code style](#code-style)         | 🟢 **97**  |    61     |
 
 ## 🏷 Categories
 
@@ -11,10 +11,9 @@
 
 Lint rules that find **potential bugs** in your code.
 
-🟢 Score: **98**
+🟢 Score: **100**
 
 - 🟢 Problems (_ESLint_)
-  - 🟥 [Disallow unused variables](#disallow-unused-variables-eslint) - **13 warnings**
   - 🟩 [Disallow `require` statements except in import statements](#disallow-require-statements-except-in-import-statements-eslint) - **passed**
   - 🟩 [Disallow assignment operators in conditional expressions](#disallow-assignment-operators-in-conditional-expressions-eslint) - **passed**
   - 🟩 [Disallow assignments where both sides are exactly the same](#disallow-assignments-where-both-sides-are-exactly-the-same-eslint) - **passed**
@@ -44,6 +43,7 @@ Lint rules that find **potential bugs** in your code.
   - 🟩 [Disallow the use of `debugger`](#disallow-the-use-of-debugger-eslint) - **passed**
   - 🟩 [Disallow unnecessary awaits for Playwright methods](#disallow-unnecessary-awaits-for-playwright-methods-eslint) - **passed**
   - 🟩 [Disallow unsafe declaration merging](#disallow-unsafe-declaration-merging-eslint) - **passed**
+  - 🟩 [Disallow unused variables](#disallow-unused-variables-eslint) - **passed**
   - 🟩 [Disallow usage of 'not' matchers when a more specific matcher exists](#disallow-usage-of-not-matchers-when-a-more-specific-matcher-exists-eslint) - **passed**
   - 🟩 [Disallow use of optional chaining in contexts where the `undefined` value is not allowed](#disallow-use-of-optional-chaining-in-contexts-where-the-undefined-value-is-not-allowed-eslint) - **passed**
   - 🟩 [Disallow useless backreferences in regular expressions](#disallow-useless-backreferences-in-regular-expressions-eslint) - **passed**
@@ -69,7 +69,7 @@ Lint rules that promote **good practices** and consistency in your code.
 🟢 Score: **97**
 
 - 🟢 Suggestions (_ESLint_)
-  - 🟥 [Ensure that module boundaries are respected within the monorepo](#ensure-that-module-boundaries-are-respected-within-the-monorepo-eslint) - **4 errors**
+  - 🟥 [Ensure that module boundaries are respected within the monorepo](#ensure-that-module-boundaries-are-respected-within-the-monorepo-eslint) - **2 errors**
   - 🟥 [Disallow the `any` type](#disallow-the-any-type-eslint) - **1 warning**
   - 🟩 [Checks dependencies in project's package.json for version mismatches](#checks-dependencies-in-projects-packagejson-for-version-mismatches-eslint) - **passed**
   - 🟩 [Classes decorated with @Component must have suffix "Component" (or custom) in their name. See more at https://angular.dev/style-guide#style-02-03](#classes-decorated-with-component-must-have-suffix-component-or-custom-in-their-name-see-more-at-https--angulardev-style-guidestyle-02-03-eslint) - **passed**
@@ -137,46 +137,17 @@ Lint rules that promote **good practices** and consistency in your code.
 
 ## 🛡️ Audits
 
-### Disallow unused variables (ESLint)
-
-<details>
-<summary>🟥 <b>13 warnings</b> (score: 0)</summary>
-
-#### Issues
-
-|   Severity   | Message                                         | Source file                                                                                       | Line(s) |
-| :----------: | :---------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-----: |
-| ⚠️ _warning_ | 'URL' is assigned a value but never used.       | `libs/characters/src/lib/data-access/src/lib/infrastructure/characters-infrastructure.service.ts` |   12    |
-| ⚠️ _warning_ | 'URL' is assigned a value but never used.       | `libs/characters/src/lib/data-access/src/lib/infrastructure/characters-infrastructure.service.ts` |   12    |
-| ⚠️ _warning_ | 'CharactersFacade' is defined but never used.   | `libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts`                 |   28    |
-| ⚠️ _warning_ | 'CharactersFacade' is defined but never used.   | `libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts`                 |   28    |
-| ⚠️ _warning_ | 'ContentChild' is defined but never used.       | `libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts`                 |    5    |
-| ⚠️ _warning_ | 'ContentChildren' is defined but never used.    | `libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts`                 |    6    |
-| ⚠️ _warning_ | 'OnInit' is defined but never used.             | `libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts`                 |   10    |
-| ⚠️ _warning_ | 'QueryList' is defined but never used.          | `libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts`                 |   12    |
-| ⚠️ _warning_ | 'viewChild' is defined but never used.          | `libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts`                 |   12    |
-| ⚠️ _warning_ | 'viewChildren' is defined but never used.       | `libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts`                 |   12    |
-| ⚠️ _warning_ | 'takeUntilDestroyed' is defined but never used. | `libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts`                 |   14    |
-| ⚠️ _warning_ | 'mergeAll' is defined but never used.           | `libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts`                 |   17    |
-| ⚠️ _warning_ | 'Observable' is defined but never used.         | `libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts`                 |   17    |
-
-</details>
-
-ESLint rule **no-unused-vars**, from _@typescript-eslint_ plugin. [📖 Docs](https://typescript-eslint.io/rules/no-unused-vars)
-
 ### Ensure that module boundaries are respected within the monorepo (ESLint)
 
 <details>
-<summary>🟥 <b>4 errors</b> (score: 0)</summary>
+<summary>🟥 <b>2 errors</b> (score: 0)</summary>
 
 #### Issues
 
-|  Severity  | Message                                                                                                                                                                                                                                                                                                                                    | Source file                                                                       | Line(s) |
-| :--------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- | :-----: |
-| 🚨 _error_ | Circular dependency between "characters-domain" and "characters-ui" detected: characters-domain -> characters-ui -> characters-domain<br /><br />Circular file chain:<br />- libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts<br />- libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts | `libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts`          |   24    |
-| 🚨 _error_ | Circular dependency between "characters-domain" and "characters-ui" detected: characters-domain -> characters-ui -> characters-domain<br /><br />Circular file chain:<br />- libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts<br />- libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts | `libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts`          |   24    |
-| 🚨 _error_ | Circular dependency between "characters-ui" and "characters-domain" detected: characters-ui -> characters-domain -> characters-ui<br /><br />Circular file chain:<br />- libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts<br />- libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts     | `libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts` |   28    |
-| 🚨 _error_ | Circular dependency between "characters-ui" and "characters-domain" detected: characters-ui -> characters-domain -> characters-ui<br /><br />Circular file chain:<br />- libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts<br />- libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts     | `libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts` |   28    |
+|  Severity  | Message                                                                                                      | Source file                                                              | Line(s) |
+| :--------: | :----------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------- | :-----: |
+| 🚨 _error_ | A project tagged with "type:data-access" can only depend on libs tagged with "type:data-access", "type:util" | `libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts` |   24    |
+| 🚨 _error_ | A project tagged with "type:data-access" can only depend on libs tagged with "type:data-access", "type:util" | `libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts` |   24    |
 
 </details>
 
@@ -272,7 +243,7 @@ Custom options:
 
 |   Severity   | Message                                   | Source file                                                                       | Line(s) |
 | :----------: | :---------------------------------------- | :-------------------------------------------------------------------------------- | :-----: |
-| ⚠️ _warning_ | Unexpected any. Specify a different type. | `libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts` |   64    |
+| ⚠️ _warning_ | Unexpected any. Specify a different type. | `libs/shared/ui/src/lib/template-modal/footer/template-modal-footer.component.ts` |   59    |
 
 </details>
 
@@ -750,6 +721,12 @@ ESLint rule **no-unsafe-declaration-merging**, from _@typescript-eslint_ plugin.
 
 ESLint rule **no-unused-labels**. [📖 Docs](https://eslint.org/docs/latest/rules/no-unused-labels)
 
+### Disallow unused variables (ESLint)
+
+🟩 **passed** (score: 100)
+
+ESLint rule **no-unused-vars**, from _@typescript-eslint_ plugin. [📖 Docs](https://typescript-eslint.io/rules/no-unused-vars)
+
 ### Disallow usage of 'not' matchers when a more specific matcher exists (ESLint)
 
 🟩 **passed** (score: 100)
@@ -1010,15 +987,15 @@ ESLint rule **no-element-handle**, from _playwright_ plugin. [📖 Docs](https:/
 
 ## About
 
-Report was created by [Code PushUp](https://github.com/code-pushup/cli#readme) on Sat, Sep 28, 2024, 10:44 AM GMT+2.
+Report was created by [Code PushUp](https://github.com/code-pushup/cli#readme) on Sat, Sep 28, 2024, 3:00 PM GMT+2.
 
 | Plugin | Audits | Version  | Duration |
 | :----- | :----: | :------: | -------: |
-| ESLint |  108   | `0.50.0` |  31.42 s |
+| ESLint |  108   | `0.50.0` |  29.54 s |
 
-| Commit                                                                    | Version  | Duration | Plugins | Categories | Audits |
-| :------------------------------------------------------------------------ | :------: | -------: | :-----: | :--------: | :----: |
-| fix(wow): npe in form listener (d04add041bce3ebd7d3fe8e78f1801876b3e4e6b) | `0.50.0` |  31.47 s |    1    |     2      |  108   |
+| Commit                                                                     | Version  | Duration | Plugins | Categories | Audits |
+| :------------------------------------------------------------------------- | :------: | -------: | :-----: | :--------: | :----: |
+| ci(workspace): add code push-up (8e05605534754e8a5d2359c02d1c2da5c2fbefb9) | `0.50.0` |  29.58 s |    1    |     2      |  108   |
 
 ---
 

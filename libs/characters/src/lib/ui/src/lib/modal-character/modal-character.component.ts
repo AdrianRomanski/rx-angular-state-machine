@@ -25,7 +25,6 @@ import {
 import { ActionButtonDirective, CloseButtonDirective, SharedBorderDirective } from '@shared/util/directives';
 import { ActionStateMachine, CharacterModalActions } from '@shared/util/model';
 import { assertUnreachable } from '@shared/util/functions';
-import { CharactersFacade } from '@characters/data-access';
 
 type DialogFooterActions = ActionStateMachine<CharacterModalActions>;
 
