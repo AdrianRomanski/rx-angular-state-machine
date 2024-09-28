@@ -1,9 +1,9 @@
 # Code PushUp Report
 
-| 🏷 Category                       |  ⭐ Score   | 🛡 Audits |
-| :-------------------------------- | :--------: | :-------: |
-| [Bug prevention](#bug-prevention) | 🟢 **100** |    47     |
-| [Code style](#code-style)         | 🟢 **97**  |    61     |
+| 🏷 Category                       |  ⭐ Score  | 🛡 Audits |
+| :-------------------------------- | :-------: | :-------: |
+| [Bug prevention](#bug-prevention) | 🟢 **98** |    47     |
+| [Code style](#code-style)         | 🟢 **98** |    61     |
 
 ## 🏷 Categories
 
@@ -11,9 +11,10 @@
 
 Lint rules that find **potential bugs** in your code.
 
-🟢 Score: **100**
+🟢 Score: **98**
 
 - 🟢 Problems (_ESLint_)
+  - 🟥 [Disallow unused variables](#disallow-unused-variables-eslint) - **6 warnings**
   - 🟩 [Disallow `require` statements except in import statements](#disallow-require-statements-except-in-import-statements-eslint) - **passed**
   - 🟩 [Disallow assignment operators in conditional expressions](#disallow-assignment-operators-in-conditional-expressions-eslint) - **passed**
   - 🟩 [Disallow assignments where both sides are exactly the same](#disallow-assignments-where-both-sides-are-exactly-the-same-eslint) - **passed**
@@ -43,7 +44,6 @@ Lint rules that find **potential bugs** in your code.
   - 🟩 [Disallow the use of `debugger`](#disallow-the-use-of-debugger-eslint) - **passed**
   - 🟩 [Disallow unnecessary awaits for Playwright methods](#disallow-unnecessary-awaits-for-playwright-methods-eslint) - **passed**
   - 🟩 [Disallow unsafe declaration merging](#disallow-unsafe-declaration-merging-eslint) - **passed**
-  - 🟩 [Disallow unused variables](#disallow-unused-variables-eslint) - **passed**
   - 🟩 [Disallow usage of 'not' matchers when a more specific matcher exists](#disallow-usage-of-not-matchers-when-a-more-specific-matcher-exists-eslint) - **passed**
   - 🟩 [Disallow use of optional chaining in contexts where the `undefined` value is not allowed](#disallow-use-of-optional-chaining-in-contexts-where-the-undefined-value-is-not-allowed-eslint) - **passed**
   - 🟩 [Disallow useless backreferences in regular expressions](#disallow-useless-backreferences-in-regular-expressions-eslint) - **passed**
@@ -66,10 +66,9 @@ Lint rules that find **potential bugs** in your code.
 
 Lint rules that promote **good practices** and consistency in your code.
 
-🟢 Score: **97**
+🟢 Score: **98**
 
 - 🟢 Suggestions (_ESLint_)
-  - 🟥 [Ensure that module boundaries are respected within the monorepo](#ensure-that-module-boundaries-are-respected-within-the-monorepo-eslint) - **2 errors**
   - 🟥 [Disallow the `any` type](#disallow-the-any-type-eslint) - **1 warning**
   - 🟩 [Checks dependencies in project's package.json for version mismatches](#checks-dependencies-in-projects-packagejson-for-version-mismatches-eslint) - **passed**
   - 🟩 [Classes decorated with @Component must have suffix "Component" (or custom) in their name. See more at https://angular.dev/style-guide#style-02-03](#classes-decorated-with-component-must-have-suffix-component-or-custom-in-their-name-see-more-at-https--angulardev-style-guidestyle-02-03-eslint) - **passed**
@@ -113,6 +112,7 @@ Lint rules that promote **good practices** and consistency in your code.
   - 🟩 [Disallows usage of the `outputs` metadata property. See more at https://angular.dev/style-guide#style-05-12](#disallows-usage-of-the-outputs-metadata-property-see-more-at-https--angulardev-style-guidestyle-05-12-eslint) - **passed**
   - 🟩 [Enforce the use of `as const` over literal type](#enforce-the-use-of-as-const-over-literal-type-eslint) - **passed**
   - 🟩 [Enforces a maximum depth to nested describe calls](#enforces-a-maximum-depth-to-nested-describe-calls-eslint) - **passed**
+  - 🟩 [Ensure that module boundaries are respected within the monorepo](#ensure-that-module-boundaries-are-respected-within-the-monorepo-eslint) - **passed**
   - 🟩 [Ensures that `Pipes` implement `PipeTransform` interface](#ensures-that-pipes-implement-pipetransform-interface-eslint) - **passed**
   - 🟩 [Ensures that async pipe results, as well as values used with the async pipe, are not negated](#ensures-that-async-pipe-results-as-well-as-values-used-with-the-async-pipe-are-not-negated-eslint) - **passed**
   - 🟩 [Ensures that classes implement lifecycle interfaces corresponding to the declared lifecycle methods. See more at https://angular.dev/style-guide#style-09-01](#ensures-that-classes-implement-lifecycle-interfaces-corresponding-to-the-declared-lifecycle-methods-see-more-at-https--angulardev-style-guidestyle-09-01-eslint) - **passed**
@@ -137,102 +137,25 @@ Lint rules that promote **good practices** and consistency in your code.
 
 ## 🛡️ Audits
 
-### Ensure that module boundaries are respected within the monorepo (ESLint)
+### Disallow unused variables (ESLint)
 
 <details>
-<summary>🟥 <b>2 errors</b> (score: 0)</summary>
+<summary>🟥 <b>6 warnings</b> (score: 0)</summary>
 
 #### Issues
 
-|  Severity  | Message                                                                                                      | Source file                                                              | Line(s) |
-| :--------: | :----------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------- | :-----: |
-| 🚨 _error_ | A project tagged with "type:data-access" can only depend on libs tagged with "type:data-access", "type:util" | `libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts` |   24    |
-| 🚨 _error_ | A project tagged with "type:data-access" can only depend on libs tagged with "type:data-access", "type:util" | `libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts` |   24    |
+|   Severity   | Message                                | Source file                                                                       | Line(s) |
+| :----------: | :------------------------------------- | :-------------------------------------------------------------------------------- | :-----: |
+| ⚠️ _warning_ | 'finalize' is defined but never used.  | `libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts`          |    5    |
+| ⚠️ _warning_ | 'tap' is defined but never used.       | `libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts`          |    5    |
+| ⚠️ _warning_ | 'finalize' is defined but never used.  | `libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts`          |    5    |
+| ⚠️ _warning_ | 'tap' is defined but never used.       | `libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts`          |    5    |
+| ⚠️ _warning_ | 'Character' is defined but never used. | `libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts` |   17    |
+| ⚠️ _warning_ | 'Character' is defined but never used. | `libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts` |   17    |
 
 </details>
 
-ESLint rule **enforce-module-boundaries**, from _@nx_ plugin.
-
-Custom options:
-
-```json
-{
-  "enforceBuildableLibDependency": true,
-  "allow": [],
-  "depConstraints": [
-    {
-      "sourceTag": "type:app",
-      "onlyDependOnLibsWithTags": [
-        "type:shell",
-        "type:feature",
-        "type:ui",
-        "type:data-access",
-        "type:util"
-      ]
-    },
-    {
-      "sourceTag": "type:shell",
-      "onlyDependOnLibsWithTags": [
-        "type:feature",
-        "type:ui",
-        "type:data-access",
-        "type:util"
-      ]
-    },
-    {
-      "sourceTag": "type:feature",
-      "onlyDependOnLibsWithTags": [
-        "type:feature",
-        "type:ui",
-        "type:data-access",
-        "type:util"
-      ]
-    },
-    {
-      "sourceTag": "type:ui",
-      "onlyDependOnLibsWithTags": [
-        "type:data-access",
-        "type:ui",
-        "type:util"
-      ]
-    },
-    {
-      "sourceTag": "type:data-access",
-      "onlyDependOnLibsWithTags": [
-        "type:data-access",
-        "type:util"
-      ]
-    },
-    {
-      "sourceTag": "type:util",
-      "onlyDependOnLibsWithTags": [
-        "type:util"
-      ]
-    },
-    {
-      "sourceTag": "domain:app",
-      "onlyDependOnLibsWithTags": [
-        "*"
-      ]
-    },
-    {
-      "sourceTag": "domain:characters",
-      "onlyDependOnLibsWithTags": [
-        "domain:characters",
-        "domain:shared"
-      ]
-    },
-    {
-      "sourceTag": "domain:shared",
-      "onlyDependOnLibsWithTags": [
-        "domain:shared"
-      ]
-    }
-  ]
-}
-```
-
-[📖 Docs](https://github.com/nrwl/nx/blob/19.6.2/docs/generated/packages/eslint-plugin/documents/enforce-module-boundaries.md)
+ESLint rule **no-unused-vars**, from _@typescript-eslint_ plugin. [📖 Docs](https://typescript-eslint.io/rules/no-unused-vars)
 
 ### Disallow the `any` type (ESLint)
 
@@ -721,12 +644,6 @@ ESLint rule **no-unsafe-declaration-merging**, from _@typescript-eslint_ plugin.
 
 ESLint rule **no-unused-labels**. [📖 Docs](https://eslint.org/docs/latest/rules/no-unused-labels)
 
-### Disallow unused variables (ESLint)
-
-🟩 **passed** (score: 100)
-
-ESLint rule **no-unused-vars**, from _@typescript-eslint_ plugin. [📖 Docs](https://typescript-eslint.io/rules/no-unused-vars)
-
 ### Disallow usage of 'not' matchers when a more specific matcher exists (ESLint)
 
 🟩 **passed** (score: 100)
@@ -816,6 +733,93 @@ ESLint rule **no-misused-new**, from _@typescript-eslint_ plugin. [📖 Docs](ht
 🟩 **passed** (score: 100)
 
 ESLint rule **max-nested-describe**, from _playwright_ plugin. [📖 Docs](https://github.com/playwright-community/eslint-plugin-playwright/tree/main/docs/rules/max-nested-describe.md)
+
+### Ensure that module boundaries are respected within the monorepo (ESLint)
+
+🟩 **passed** (score: 100)
+
+ESLint rule **enforce-module-boundaries**, from _@nx_ plugin.
+
+Custom options:
+
+```json
+{
+  "enforceBuildableLibDependency": true,
+  "allow": [],
+  "depConstraints": [
+    {
+      "sourceTag": "type:app",
+      "onlyDependOnLibsWithTags": [
+        "type:shell",
+        "type:feature",
+        "type:ui",
+        "type:data-access",
+        "type:util"
+      ]
+    },
+    {
+      "sourceTag": "type:shell",
+      "onlyDependOnLibsWithTags": [
+        "type:feature",
+        "type:ui",
+        "type:data-access",
+        "type:util"
+      ]
+    },
+    {
+      "sourceTag": "type:feature",
+      "onlyDependOnLibsWithTags": [
+        "type:feature",
+        "type:ui",
+        "type:data-access",
+        "type:util"
+      ]
+    },
+    {
+      "sourceTag": "type:ui",
+      "onlyDependOnLibsWithTags": [
+        "type:data-access",
+        "type:ui",
+        "type:util"
+      ]
+    },
+    {
+      "sourceTag": "type:data-access",
+      "onlyDependOnLibsWithTags": [
+        "type:data-access",
+        "type:util"
+      ]
+    },
+    {
+      "sourceTag": "type:util",
+      "onlyDependOnLibsWithTags": [
+        "type:util"
+      ]
+    },
+    {
+      "sourceTag": "domain:app",
+      "onlyDependOnLibsWithTags": [
+        "*"
+      ]
+    },
+    {
+      "sourceTag": "domain:characters",
+      "onlyDependOnLibsWithTags": [
+        "domain:characters",
+        "domain:shared"
+      ]
+    },
+    {
+      "sourceTag": "domain:shared",
+      "onlyDependOnLibsWithTags": [
+        "domain:shared"
+      ]
+    }
+  ]
+}
+```
+
+[📖 Docs](https://github.com/nrwl/nx/blob/19.6.2/docs/generated/packages/eslint-plugin/documents/enforce-module-boundaries.md)
 
 ### Ensures that `Pipes` implement `PipeTransform` interface (ESLint)
 
@@ -987,15 +991,15 @@ ESLint rule **no-element-handle**, from _playwright_ plugin. [📖 Docs](https:/
 
 ## About
 
-Report was created by [Code PushUp](https://github.com/code-pushup/cli#readme) on Sat, Sep 28, 2024, 3:00 PM GMT+2.
+Report was created by [Code PushUp](https://github.com/code-pushup/cli#readme) on Sat, Sep 28, 2024, 4:05 PM GMT+2.
 
 | Plugin | Audits | Version  | Duration |
 | :----- | :----: | :------: | -------: |
-| ESLint |  108   | `0.50.0` |  29.54 s |
+| ESLint |  108   | `0.50.0` |  25.53 s |
 
-| Commit                                                                     | Version  | Duration | Plugins | Categories | Audits |
-| :------------------------------------------------------------------------- | :------: | -------: | :-----: | :--------: | :----: |
-| ci(workspace): add code push-up (8e05605534754e8a5d2359c02d1c2da5c2fbefb9) | `0.50.0` |  29.58 s |    1    |     2      |  108   |
+| Commit                                                                                        | Version  | Duration | Plugins | Categories | Audits |
+| :-------------------------------------------------------------------------------------------- | :------: | -------: | :-----: | :--------: | :----: |
+| fix(workspace): bug prevention code push-up errors (219675f6a3c9d710b95bdf000f91e179c2528e01) | `0.50.0` |  25.57 s |    1    |     2      |  108   |
 
 ---
 

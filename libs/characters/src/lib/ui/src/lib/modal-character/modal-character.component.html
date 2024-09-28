@@ -1,58 +1,57 @@
 <shared-ui-template-modal class="character-card">
   <shared-ui-template-modal-header header style="align-self: center">
-    <!--live coding-->
     <div
-      [ngClass]="data.faction === 'Horde' ? 'horde-info' : 'alliance-info'" class="header-section">
-      <h1>{{ data.name }}</h1>
-      <small>ID: {{ data.id }}</small>
+      [ngClass]="stateMachine.data.faction === 'Horde' ? 'horde-info' : 'alliance-info'" class="header-section">
+      <h1>{{ stateMachine.data.name }}</h1>
+      <small>ID: {{ stateMachine.data.id }}</small>
       <p class="faction">
         <mat-icon
           >
-          {{ data.faction === 'Horde' ? 'star' : 'star_border' }}
+          {{ stateMachine.data.faction === 'Horde' ? 'star' : 'star_border' }}
         </mat-icon>
         <span
-          *ngIf="data.faction === 'Horde'"
+          *ngIf="stateMachine.data.faction === 'Horde'"
         >For the Horde!</span>
         <span
-          *ngIf="data.faction === 'Alliance'"
+          *ngIf="stateMachine.data.faction === 'Alliance'"
         >For the Alliance!</span>
       </p>
-      <p>{{data.biography}}</p>
+      <p>{{stateMachine.data.biography}}</p>
     </div>
   </shared-ui-template-modal-header>
   <div body>
     <characters-ui-stats [data]="{
-        level: data.level,
-        race: data.race,
-        class: data.class,
-        profession: data.profession,
-        health: data.health,
-        mana: data.mana,
-        strength: data.strength,
-        agility: data.agility,
-        intellect: data.intellect,
-        stamina: data.stamina,
-        armor: data.armor
+        level: stateMachine.data.level,
+        race: stateMachine.data.race,
+        class: stateMachine.data.class,
+        profession: stateMachine.data.profession,
+        health: stateMachine.data.health,
+        mana: stateMachine.data.mana,
+        strength: stateMachine.data.strength,
+        agility: stateMachine.data.agility,
+        intellect: stateMachine.data.intellect,
+        stamina: stateMachine.data.stamina,
+        armor: stateMachine.data.armor
     }"></characters-ui-stats>
     <characters-ui-lore [data]="{
-        name: data.name,
-        race: data.race,
-        class: data.class,
-        profession: data.profession
+        name: stateMachine.data.name,
+        race: stateMachine.data.race,
+        class: stateMachine.data.class,
+        profession: stateMachine.data.profession
     }">
     </characters-ui-lore>
     <characters-ui-abilities [data]="{
-        abilities: data.abilities
+        abilities: stateMachine.data.abilities
     }">
     </characters-ui-abilities>
     <characters-ui-equipment [data]="{
-        equipment: data.equipment
+        equipment: stateMachine.data.equipment
     }">
     ></characters-ui-equipment>
   </div>
   <shared-ui-template-modal-footer footer
     (actionButtonClick)="onActionButtonClick($event)">
-    <button *ngFor="let action of data.actions"
+    <button *ngFor="let action of stateMachine.ui.actions"
         mat-button
         sharedActionBtn
         [action]="action"

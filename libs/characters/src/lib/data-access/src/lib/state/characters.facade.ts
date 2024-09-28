@@ -2,35 +2,38 @@
 import { inject, Injectable } from '@angular/core';
 
 /**DEPENDENCIES*/
-import { map, Observable, switchMap, tap } from 'rxjs';
+import { map, Observable, switchMap } from 'rxjs';
 import { rxState } from '@rx-angular/state';
 import { rxActions } from '@rx-angular/state/actions';
 
 /**INTERNALS*/
 import { CharactersInfrastructureService } from '../infrastructure/characters-infrastructure.service';
-import { CardStateMachine, CharactersState } from './characters.model';
+import {
+  CardStateMachine,
+  CharactersState,
+  CharacterStateMachine
+} from './characters.model';
 import { BORDER_STYLE_1_10 } from '../util/const/border';
 import { HORDE_ACCENT } from '../util/const/accent';
 import { listAccent, listBorder } from '../util/functions/ui';
 import { CharactersStatistics } from '../model/statistics';
 import { calculateCharacterStatistics } from '../util/functions/statistics';
-
-/**CHARACTERS*/
-import { ListUI } from '@characters/util/model';
+import { CharacterDomain } from '../entity/character.entity';
 import {
   mapDomainToCharacter,
   mapToCardStateMachine,
 } from '../util/functions/mapper.';
-import { CharacterModalService } from '@characters/ui';
+
+/**CHARACTERS*/
+import { ListUI } from '@characters/util/model';
 
 @Injectable({ providedIn: 'root' })
 export class CharactersFacade {
   readonly actions = rxActions<{
     findAll: void;
-    openCharacterModal: { id: string };
+    findById:  { id: string };
   }>();
   private readonly infrastructure = inject(CharactersInfrastructureService);
-  private readonly modalService = inject(CharacterModalService);
 
   private state = rxState<CharactersState>(({ set, connect }) => {
     set({
@@ -44,7 +47,7 @@ export class CharactersFacade {
       this.actions.findAll$.pipe(
         switchMap(() =>
           this.infrastructure.findAll().pipe(
-            map((characterDomains) => {
+            map((characterDomains: CharacterDomain[]) => {
               const stats: CharactersStatistics =
                 calculateCharacterStatistics(characterDomains);
               const level: number = stats.totalLevels / stats.totalCharacters;
@@ -60,6 +63,22 @@ export class CharactersFacade {
         )
       )
     );
+    connect(
+      'character',
+      this.actions.findById$.pipe(
+        switchMap(({id}) =>
+          this.infrastructure.findById(id).pipe(
+            map((characterDomain: CharacterDomain) => {
+              const character = mapDomainToCharacter(characterDomain);
+              return {
+                data: character,
+                ui: { actions: character.actions },
+              };
+            })
+          )
+        )
+      ),
+    );
   });
 
   public readonly listUI$: Observable<ListUI> = this.state.select(
@@ -71,16 +90,7 @@ export class CharactersFacade {
     'data'
   );
 
-  private openCharacterModalEffect = this.actions.onOpenCharacterModal((id$) =>
-    id$.pipe(
-      switchMap(({ id }) => {
-        return this.infrastructure.findById(id).pipe(
-          map(mapDomainToCharacter),
-          tap((s) => {
-            this.modalService.openCharacterModal(s);
-          })
-        );
-      })
-    )
+  public readonly character$: Observable<CharacterStateMachine> = this.state.select(
+    'character',
   );
 }

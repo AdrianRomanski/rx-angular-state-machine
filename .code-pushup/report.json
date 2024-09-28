@@ -1,14 +1,14 @@
 {
   "commit": {
-    "hash": "8e05605534754e8a5d2359c02d1c2da5c2fbefb9",
-    "message": "ci(workspace): add code push-up",
-    "date": "2024-09-28T12:44:07.000Z",
+    "hash": "219675f6a3c9d710b95bdf000f91e179c2528e01",
+    "message": "fix(workspace): bug prevention code push-up errors",
+    "date": "2024-09-28T13:04:09.000Z",
     "author": "adrianromanski"
   },
   "packageName": "@code-pushup/core",
   "version": "0.50.0",
-  "date": "2024-09-28T13:00:52.095Z",
-  "duration": 29577,
+  "date": "2024-09-28T14:05:50.378Z",
+  "duration": 25569,
   "categories": [
     {
       "slug": "bug-prevention",
@@ -44,8 +44,8 @@
       "title": "ESLint",
       "slug": "eslint",
       "icon": "eslint",
-      "duration": 29535,
-      "date": "2024-09-28T13:00:52.121Z",
+      "duration": 25528,
+      "date": "2024-09-28T14:05:50.402Z",
       "audits": [
         {
           "slug": "angular-eslint-directive-selector-45928d8f84697aff",
@@ -349,11 +349,90 @@
         },
         {
           "slug": "typescript-eslint-no-unused-vars",
-          "displayValue": "passed",
-          "value": 0,
-          "score": 1,
+          "displayValue": "6 warnings",
+          "value": 6,
+          "score": 0,
           "details": {
-            "issues": []
+            "issues": [
+              {
+                "message": "'finalize' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
+                  "position": {
+                    "startLine": 5,
+                    "startColumn": 10,
+                    "endLine": 5,
+                    "endColumn": 18
+                  }
+                }
+              },
+              {
+                "message": "'tap' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
+                  "position": {
+                    "startLine": 5,
+                    "startColumn": 48,
+                    "endLine": 5,
+                    "endColumn": 51
+                  }
+                }
+              },
+              {
+                "message": "'Character' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
+                  "position": {
+                    "startLine": 17,
+                    "startColumn": 10,
+                    "endLine": 17,
+                    "endColumn": 19
+                  }
+                }
+              },
+              {
+                "message": "'finalize' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
+                  "position": {
+                    "startLine": 5,
+                    "startColumn": 10,
+                    "endLine": 5,
+                    "endColumn": 18
+                  }
+                }
+              },
+              {
+                "message": "'tap' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
+                  "position": {
+                    "startLine": 5,
+                    "startColumn": 48,
+                    "endLine": 5,
+                    "endColumn": 51
+                  }
+                }
+              },
+              {
+                "message": "'Character' is defined but never used.",
+                "severity": "warning",
+                "source": {
+                  "file": "libs/characters/src/lib/ui/src/lib/modal-character/modal-character.component.ts",
+                  "position": {
+                    "startLine": 17,
+                    "startColumn": 10,
+                    "endLine": 17,
+                    "endColumn": 19
+                  }
+                }
+              }
+            ]
           },
           "title": "Disallow unused variables",
           "description": "ESLint rule **no-unused-vars**, from _@typescript-eslint_ plugin.",
@@ -1095,38 +1174,11 @@
         },
         {
           "slug": "nx-enforce-module-boundaries-a5cf8e506d20217b",
-          "displayValue": "2 errors",
-          "value": 2,
-          "score": 0,
+          "displayValue": "passed",
+          "value": 0,
+          "score": 1,
           "details": {
-            "issues": [
-              {
-                "message": "A project tagged with \"type:data-access\" can only depend on libs tagged with \"type:data-access\", \"type:util\"",
-                "severity": "error",
-                "source": {
-                  "file": "libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
-                  "position": {
-                    "startLine": 24,
-                    "startColumn": 1,
-                    "endLine": 24,
-                    "endColumn": 56
-                  }
-                }
-              },
-              {
-                "message": "A project tagged with \"type:data-access\" can only depend on libs tagged with \"type:data-access\", \"type:util\"",
-                "severity": "error",
-                "source": {
-                  "file": "libs/characters/src/lib/data-access/src/lib/state/characters.facade.ts",
-                  "position": {
-                    "startLine": 24,
-                    "startColumn": 1,
-                    "endLine": 24,
-                    "endColumn": 56
-                  }
-                }
-              }
-            ]
+            "issues": []
           },
           "title": "Ensure that module boundaries are respected within the monorepo",
           "description": "ESLint rule **enforce-module-boundaries**, from _@nx_ plugin.\n\nCustom options:\n\n```json\n{\n  \"enforceBuildableLibDependency\": true,\n  \"allow\": [],\n  \"depConstraints\": [\n    {\n      \"sourceTag\": \"type:app\",\n      \"onlyDependOnLibsWithTags\": [\n        \"type:shell\",\n        \"type:feature\",\n        \"type:ui\",\n        \"type:data-access\",\n        \"type:util\"\n      ]\n    },\n    {\n      \"sourceTag\": \"type:shell\",\n      \"onlyDependOnLibsWithTags\": [\n        \"type:feature\",\n        \"type:ui\",\n        \"type:data-access\",\n        \"type:util\"\n      ]\n    },\n    {\n      \"sourceTag\": \"type:feature\",\n      \"onlyDependOnLibsWithTags\": [\n        \"type:feature\",\n        \"type:ui\",\n        \"type:data-access\",\n        \"type:util\"\n      ]\n    },\n    {\n      \"sourceTag\": \"type:ui\",\n      \"onlyDependOnLibsWithTags\": [\n        \"type:data-access\",\n        \"type:ui\",\n        \"type:util\"\n      ]\n    },\n    {\n      \"sourceTag\": \"type:data-access\",\n      \"onlyDependOnLibsWithTags\": [\n        \"type:data-access\",\n        \"type:util\"\n      ]\n    },\n    {\n      \"sourceTag\": \"type:util\",\n      \"onlyDependOnLibsWithTags\": [\n        \"type:util\"\n      ]\n    },\n    {\n      \"sourceTag\": \"domain:app\",\n      \"onlyDependOnLibsWithTags\": [\n        \"*\"\n      ]\n    },\n    {\n      \"sourceTag\": \"domain:characters\",\n      \"onlyDependOnLibsWithTags\": [\n        \"domain:characters\",\n        \"domain:shared\"\n      ]\n    },\n    {\n      \"sourceTag\": \"domain:shared\",\n      \"onlyDependOnLibsWithTags\": [\n        \"domain:shared\"\n      ]\n    }\n  ]\n}\n```",

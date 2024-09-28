@@ -4,7 +4,9 @@ import { MatDialog } from '@angular/material/dialog';
 
 /**INTERNALS*/
 import { ModalCharacterComponent } from './modal-character/modal-character.component';
-import { Character } from '@characters/util/model';
+
+/**CHARACTER*/
+import { CharacterStateMachine } from '@characters/data-access';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +14,7 @@ import { Character } from '@characters/util/model';
 export class CharacterModalService {
   private readonly dialog = inject(MatDialog);
 
-  openCharacterModal(character: Character): void {
+  openCharacterModal(character: CharacterStateMachine): void {
     this.dialog.open(ModalCharacterComponent, {
       width: '700px',
       data: character,

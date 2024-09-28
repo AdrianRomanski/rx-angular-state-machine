@@ -8,15 +8,16 @@
       <p>Explore the detailed profiles of your favorite heroes and adventurers.</p>
     </div>
     <div  class="characters-container">
-      <characters-ui-card (click)="openCharacterModal(card.data.id)"
-        *ngFor="let card of cards"
-        [data]="{
-            id: card.data.id,
-            race: card.data.race,
-            name: card.data.name,
-            class: card.data.class,
-       }"
-       [ui]="card.ui">
+      <characters-ui-card *ngFor="let card of cards"
+          (click)="openCharacterModal(card.data.id)"
+          [data]="{
+              id: card.data.id,
+              race: card.data.race,
+              name: card.data.name,
+              class: card.data.class,
+         }"
+         [ui]="card.ui"
+      >
       </characters-ui-card>
     </div>
 

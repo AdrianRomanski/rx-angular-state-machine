@@ -1,4 +1,4 @@
-import { Ability, AllianceRace, Class, Equipment, HordeRace, Profession } from './character.model';
+import { Ability, AllianceRace, Class, Equipment, Faction, HordeRace, Profession } from './character.model';
 
 export interface CardData {
   id: string;
@@ -34,4 +34,24 @@ export interface CharacterAbilitiesData {
 
 export interface CharacterEquipmentData {
   equipment: Equipment[];
+}
+
+export interface CharacterModalData {
+    id: string;
+    name: string;
+    level: number;
+    faction: Faction;
+    race: HordeRace | AllianceRace;
+    class: Class;
+    profession: Profession;
+    health: number;
+    mana: number;
+    strength: number;
+    agility: number;
+    intellect: number;
+    stamina: number;
+    armor: number;
+    abilities: Ability[];
+    biography: string;
+    equipment: Equipment[];
 }

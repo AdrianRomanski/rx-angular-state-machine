@@ -11,3 +11,7 @@ export interface CardUI {
   raceColor: string;
   classColor: string;
 }
+
+export interface ModalUI {
+  actions: string[];
+}
